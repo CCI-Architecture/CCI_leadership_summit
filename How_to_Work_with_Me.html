@@ -1,0 +1,1689 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>How to Work with Me – Survey Responses</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.5; text-align: center; }
+    h1 { text-align: center; }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+        justify-items: center;
+        margin-top: 20px;
+    }
+    details {
+        width: 90%;
+        text-align: left;
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    summary {
+        font-weight: bold;
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+    p { margin: 0.3em 0; }
+</style>
+</head>
+<body>
+<h1>How to Work with Me – Survey Responses</h1><img src="mainlogo.png" style="margin: 20px auto; display: block;" width="250"/>
+<p></p>
+
+<div style="text-align: center; margin: 20px 0;">
+<input id="searchInput" placeholder="Search by name..." style="width: 250px; padding: 8px; font-size: 14px;" type="text"/>
+<select id="filterSelect" style="padding: 8px; font-size: 14px; margin-left: 10px;">
+<option value="">Filter by Title</option>
+</select>
+</div>
+<script>
+document.getElementById('searchInput').addEventListener('input', function() {
+    const val = this.value.toLowerCase();
+    document.querySelectorAll('details').forEach(d => {
+        const match = d.querySelector('summary').textContent.toLowerCase().includes(val);
+        d.style.display = match ? 'block' : 'none';
+    });
+});
+
+document.getElementById('filterSelect').addEventListener('change', function() {
+    const val = this.value.toLowerCase();
+    document.querySelectorAll('details').forEach(d => {
+        const text = d.textContent.toLowerCase();
+        d.style.display = (val === "" || text.includes(val)) ? 'block' : 'none';
+    });
+});
+
+// Auto-fill unique titles in filter dropdown
+window.onload = function() {
+    const positions = new Set();
+    document.querySelectorAll('details').forEach(d => {
+        d.querySelectorAll('p').forEach(p => {
+            if (p.textContent.startsWith("Position:")) {
+                const title = p.textContent.split("Position:")[1].trim();
+                if (title) positions.add(title);
+            }
+        });
+    });
+    const filter = document.getElementById('filterSelect');
+    Array.from(positions).sort().forEach(title => {
+        const opt = document.createElement("option");
+        opt.value = title;
+        opt.text = title;
+        filter.appendChild(opt);
+    });
+};
+</script>
+<div class="grid-container"><details><summary>Alex Winchester</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Director, Cyber Risk</p>
+<p><strong>Work Quote:</strong> Any quote from The Office</p>
+<p><strong>Leadership Philosophy:</strong> Accomplish the mission, take care of people. You can't do one without the other</p>
+<p><strong>Top 5 Strengths:</strong> Ideation, Analytical, Command, Maximizer, Intellection</p>
+<p><strong>Describe what motivates you most at work:</strong> : When anyone on my team gets recognized</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Playing defense</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Surgical Tech, R&amp;D Sourcing, Marketing</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 1</p>
+<p><strong>Self-Centeredness:</strong> 5</p>
+<p><strong>Favorite Food:</strong> Mac n cheese</p>
+<p><strong>Favorite Sport:</strong> Golf</p>
+<p><strong>Favorite Book:</strong> Caddy for Life</p>
+<p><strong>Favorite Art/Music:</strong> Concerts</p>
+<p><strong>Favorite DIY:</strong> I make all sorts of stuff in my wood shop</p>
+<p><strong>Impactful Books:</strong> Age of Turbulence, Allen Greenspan
+Cobra Event, Richard Preston</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Teams call</p>
+<p><strong>Preferred Contact:</strong> Teams Message</p></div></details><details><summary>Eric Tabor</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Sr. Director, Business Information Security Partner</p>
+<p><strong>Work Quote:</strong> "If people can trust you, they place their confidence in you and they will do business with you. If there is any doubt about what your fiber or character is they will back away."</p>
+<p><strong>Leadership Philosophy:</strong> I trust my teams, I would rather they learn and grow through empowerment and I take the blame for a few mistakes than to have them feel micromanaged.</p>
+<p><strong>Top 5 Strengths:</strong> Competition, Communication, Significance, Harmony, Analytical</p>
+<p><strong>Describe what motivates you most at work:</strong> : chalking up a big win</p>
+<p><strong>Patience:</strong> 1</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: lack of empowerment. Micromanagement.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Vice President, ITBP Global Commercial
+Vice President, ITBP MSNT &amp; Corporate Functions
+Director, Global PMO (Kellogg Company)</p>
+<p><strong>Belief:</strong> 1</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Any and all Seafood (except crawfish)</p>
+<p><strong>Favorite Sport:</strong> Swimming</p>
+<p><strong>Favorite Book:</strong> The Simple Path to Wealth</p>
+<p><strong>Favorite Art/Music:</strong> Outdoor Concerts</p>
+<p><strong>Favorite DIY:</strong> Brewing Beer</p>
+<p><strong>Impactful Books:</strong> The Simple Path to Wealth, J.L. Collins
+In Harm's Way, Doug Stanton</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Bottom Line Up Front (BLUF) - open with why you're here.</p>
+<p><strong>Preferred Contact:</strong> In-Person, Phone, Talk to me</p></div></details><details><summary>Thomas Busch</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Director, Cybersecurity Defense</p>
+<p><strong>Work Quote:</strong> "If everything is a priority, nothing is." – Patrick Lencioni</p>
+<p><strong>Leadership Philosophy:</strong> Primarily I want the people I lead to know I value them as human beings.  I want them to succeed, and I want us to succeed together as a team.</p>
+<p><strong>Top 5 Strengths:</strong> Connectedness, Learner, Relator, Achiever, Adaptability</p>
+<p><strong>Describe what motivates you most at work:</strong> : I like to accomplish things.  I like to be able to stop occasionally and say "We did that." and feel proud of something.  It's very easy to move on to the next thing and forget to stop and smell the roses you planted so long ago.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 3</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Always looking at what's broken and never taking a moment to be happy about what's not.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Sr. Manager, Application security (CCI)
+Sr. Manager, Commercial Operations (IT)
+Manager, Web &amp; Mobile Development (IT)</p>
+<p><strong>Belief:</strong> 2</p>
+<p><strong>Awareness:</strong> 3</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 1</p>
+<p><strong>Favorite Food:</strong> All the things I can't have while on Keto</p>
+<p><strong>Favorite Sport:</strong> Ice Hockey</p>
+<p><strong>Favorite Book:</strong> Mistborn, Brandon Sanderson</p>
+<p><strong>Favorite Art/Music:</strong> Drums</p>
+<p><strong>Favorite DIY:</strong> Anything I can do myself, but especially electrical or data/low-voltage projects.</p>
+<p><strong>Impactful Books:</strong> "How would you move Mt. Fuji?" William Poundstone
+"Phoenix Project" Gene Kim</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Informal!  In person just talk to me.  If on teams, don't just say "hi" but open the conversation.</p>
+<p><strong>Preferred Contact:</strong> Teams Message, In-Person</p></div></details><details><summary>Kevin Lynn McLaughlin</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> VP</p>
+<p><strong>Work Quote:</strong> Do the little things right and you will train your habits to do the big things right.</p>
+<p><strong>Leadership Philosophy:</strong> Do the work. Don't worry about how long or how short the time is that it takes to do the work. Just get the work deliverables completed and increase your efficacy by touching once.</p>
+<p><strong>Top 5 Strengths:</strong> Input, learner, Intellection, Achiever, Ideation</p>
+<p><strong>Describe what motivates you most at work:</strong> : What we do and how it impacts the life's of our customers.</p>
+<p><strong>Patience:</strong> 2</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Someone who takes 20 minutes to explain something that should take 2-3 minutes.    Day long (8-5) video meetings.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : VP at Stryker,  CISO at University of Cincinnati, Special Agent- US Government</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 4</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Any form of Chinese or Pizza</p>
+<p><strong>Favorite Sport:</strong> American Football</p>
+<p><strong>Favorite Book:</strong> Too many to list.</p>
+<p><strong>Favorite Art/Music:</strong> Listening to Music_especially when working out.</p>
+<p><strong>Favorite DIY:</strong> Relacing and replacing bladders in Footballs.</p>
+<p><strong>Impactful Books:</strong> How full is your bucket and the one minute manager</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> 1 minute or so to catch up and then right to the point.  Informal as much as possible.</p>
+<p><strong>Preferred Contact:</strong> Text</p></div></details><details><summary>Traci Peck</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Sr. Director, IT Compliance Assurance</p>
+<p><strong>Work Quote:</strong> A team is not a group of people that work together. A team is a group of people that trust each other. Simon Sinek</p>
+<p><strong>Leadership Philosophy:</strong> I love to win. For me winning is the success of our team, and much like a coach which I have been at various times in my life, I will push you to become better, to improve upon your strengths, and to be successful in your endeavors. I don’t believe in settling for second best, if we commit to something we need to do it right the first time.
+I will continue to raise the bar that symbolizes my expectations of the team. If we do not learn from our successes and failures, then we will not improve. I will be a driving force behind the team asking you to find ways to be better and more effective, even when you might think we may have already achieved success.</p>
+<p><strong>Top 5 Strengths:</strong> Competition Input Intellection Relator Achiever</p>
+<p><strong>Describe what motivates you most at work:</strong> : Developing future leaders and keeping Stryker data and assets protected</p>
+<p><strong>Patience:</strong> 2</p>
+<p><strong>Analytical:</strong> 3</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: toxic behaviors</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Sr. Director IT Compliance Assurance
+Director, Global Security Risk and Compliance
+Director, Application Services
+Director, eWorkplace &amp; Customer Experience</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 1</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Tacos</p>
+<p><strong>Favorite Sport:</strong> Golf</p>
+<p><strong>Favorite Book:</strong> Pillars of the Earth</p>
+<p><strong>Favorite Art/Music:</strong> Listening to music</p>
+<p><strong>Favorite DIY:</strong> Woodworking</p>
+<p><strong>Impactful Books:</strong> Start with Why Simon Sinek 
+Made to Stick Dan Heath</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> to the point</p>
+<p><strong>Preferred Contact:</strong> Teams Message, Phone, In-Person</p></div></details><details><summary>Jeevan Yarlagadda</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Director, Data Protection and Internal Risk</p>
+<p><strong>Work Quote:</strong> The only way to do great work is to love what you do!</p>
+<p><strong>Leadership Philosophy:</strong> Leadership is about serving others. Take the time to understand your team their strengths, their weaknesses, and their aspirations. Help them grow by developing their weaknesses while leveraging their strengths. Stand by them when they need you the most.
+Recognition matters. Acknowledge and appreciate people’s efforts, regardless of titles or hierarchy. Great leadership isn’t about authority—it’s about empowering and uplifting others. 
+Philosophy : We are not a team because we work together, we are a team because we trust, respect and care for each other.</p>
+<p><strong>Top 5 Strengths:</strong> Harmony , Includer , Communication, Woo , Empathy</p>
+<p><strong>Describe what motivates you most at work:</strong> :  Every day, I take pride in knowing that I’ve contributed to making healthcare better and, in my own way, played a small but meaningful role in helping humanity.</p>
+<p><strong>Patience:</strong> 5</p>
+<p><strong>Analytical:</strong> 3</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Failing to deliver on commitments, complaining without taking action, unnecessary bureaucracy, and a lack of accountability.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Business Analyst/Validation Analyst, Manager , Sr Manager</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Thai, Asian</p>
+<p><strong>Favorite Sport:</strong> Tennis</p>
+<p><strong>Favorite Book:</strong> Walk to remember</p>
+<p><strong>Favorite Art/Music:</strong> Love listening to Pod casts</p>
+<p><strong>Favorite DIY:</strong> Cleaning my car :)</p>
+<p><strong>Impactful Books:</strong> The Vegetarian by Han kang
+The Blind Side - Michael Lewis</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> I appreciate a good, healthy, and friendly discussion. If we know each other, conversations flow easily. If we don’t, feel free to reach out—I’m always open to a chat!</p>
+<p><strong>Preferred Contact:</strong> Email, Phone, In-Person, Teams Message</p></div></details><details><summary>Erik Elliott</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Manager, Security Architecture</p>
+<p><strong>Work Quote:</strong> "Do what you can, with what you have, where you are." — Theodore Roosevelt</p>
+<p><strong>Leadership Philosophy:</strong> Empower those who work for you to be the best they can be in their position. Enabling the team to be successful will allow you to have success.</p>
+<p><strong>Top 5 Strengths:</strong> Learner, Achiever, Input, Individualization, Intellection</p>
+<p><strong>Describe what motivates you most at work:</strong> : Finding the simplest solution to complex problems with a team.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: "Because it's always been that way," planned redundancy of busying tasks, busy work.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Threat Hunting Manager, Cyber Warfare Weapons And Tactics NCOIC, Strategic Planning Coordinator.</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 1</p>
+<p><strong>Favorite Food:</strong> yellowtail sushi</p>
+<p><strong>Favorite Sport:</strong> American football</p>
+<p><strong>Favorite Book:</strong> The Great Gatsby</p>
+<p><strong>Favorite Art/Music:</strong> Listening to music</p>
+<p><strong>Favorite DIY:</strong> Woodworking</p>
+<p><strong>Impactful Books:</strong> The Federalist Papers - John Jay, Alexander Hamilton, James Madison
+Fahrenheit 451 - Ray Bradbury</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Informal and to the point</p>
+<p><strong>Preferred Contact:</strong> Email, Teams Message</p></div></details><details><summary>Jason Howard</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Senior Manager, IT Infrastructure</p>
+<p><strong>Work Quote:</strong> If you don’t have time to do it right, when are you going to have time to do it again?</p>
+<p><strong>Leadership Philosophy:</strong> 1. Do It Right the First Time
+	•	“If you don’t have time to do it right, when are you going to have time to do it again?” is more than a quote—it’s a principle.
+	•	Precision, accuracy, and quality are non-negotiable; shortcuts lead to inefficiencies and rework.
+	•	We operate with the mindset that every task, project, or solution should be built to last, scalable, and maintainable.
+
+2. Lead by Example
+	•	Leadership is about setting the standard—not just expecting it from others.
+	•	I work alongside my team, not above them. No task is beneath a leader when the goal is success.
+	•	My actions, commitment, and integrity will define expectations more than words ever could.
+
+3. Technical Excellence &amp; Business Acumen
+	•	We are not just IT professionals; we are business enablers.
+	•	Technical expertise must be paired with a deep understanding of how our work drives company success.
+	•	Our team is the go-to resource because we bridge technology with business needs seamlessly.
+
+4. Ownership &amp; Accountability
+	•	Every team member takes full ownership of their responsibilities—problems are not just identified but solved.
+	•	If an issue arises, we don’t point fingers—we step in, fix it, and learn from it.
+	•	Reliability is our currency; trust is our foundation.
+
+5. Continuous Learning &amp; Improvement
+	•	Technology evolves, and so must we. Staying ahead requires curiosity, training, and a commitment to growth.
+	•	We push boundaries, embrace innovation, and refine processes to keep delivering excellence.
+	•	We document, automate, and optimize to work smarter, not harder.
+
+6. Efficiency Through Smart Work
+	•	Speed without accuracy is wasteful; efficiency is about delivering the right solution the first time.
+	•	We prioritize automation, proactive problem-solving, and strategic thinking over firefighting.
+	•	The goal is to spend time improving, not repeatedly fixing the same issues.
+
+7. Service-Oriented Mindset
+	•	IT is a service, and our reputation is built on responsiveness, technical mastery, and business alignment.
+	•	We don’t just solve problems; we anticipate them.
+	•	Collaboration with stakeholders is key—understanding their needs ensures our solutions have impact.</p>
+<p><strong>Top 5 Strengths:</strong> 1. Restorative
+2. Strategic
+3. Achiever
+4. Self-Assurance
+5. Futuristic</p>
+<p><strong>Describe what motivates you most at work:</strong> : Ultimately, I’m motivated by the ability to lead by example, solve meaningful problems, and contribute to a culture that values excellence, teamwork, and continuous growth.</p>
+<p><strong>Patience:</strong> 2</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 3</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: I am most demotivated by inefficiency, complacency, and a lack of accountability. When problems are repeatedly addressed with temporary fixes instead of lasting solutions, it goes against my core belief in doing things right the first time. I thrive in environments where people take ownership, continuously improve, and push for excellence—so when there’s resistance to change or a reluctance to evolve, it can be frustrating.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : 1. Senior Manager, Infrastructure (current)
+2. Manager, Infrastructure
+3. Engineer, Infrastructure
+
+More important than the roles, the people and projects that I've had the privilege of working with have been critical to my success.</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 1</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Qdoba - burritos, burrito bowls</p>
+<p><strong>Favorite Sport:</strong> Timbersports - Hot Saw, specifically.</p>
+<p><strong>Favorite Book:</strong> Extreme Ownership: How U.S. Navy SEALs Lead and Win ~ Jocko Willink &amp; Leif Babin</p>
+<p><strong>Favorite Art/Music:</strong> Painting</p>
+<p><strong>Favorite DIY:</strong> Woodworking, Homesteading, playing on my Tractor</p>
+<p><strong>Impactful Books:</strong> Turn the Ship Around!: A True Story of Turning Followers Into Leaders ~ by L. David Marquet
+Multipliers: How the Best Leaders Make Everyone Smarter ~ by Liz Wiseman</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> to the point</p>
+<p><strong>Preferred Contact:</strong> Email, Teams Message, Phone, In-Person</p></div></details><details><summary>Maria Reyes Mejias</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> SOC Associate Manager</p>
+<p><strong>Work Quote:</strong> Be the leader I always needed when I was a junior</p>
+<p><strong>Leadership Philosophy:</strong> I believe in recognizing achievements publicly and addressing challenges privately, fostering a culture of trust and respect. Leadership is most effective when demonstrated through actions rather than just words leading by example sets the standard for excellence. My goal is to leave a positive and lasting impact wherever I go, ensuring that my contributions inspire growth, collaboration, and meaningful progress.</p>
+<p><strong>Top 5 Strengths:</strong> Belief
+Discipline
+Harmony
+Consistency
+Responsibility</p>
+<p><strong>Describe what motivates you most at work:</strong> : What motivates me most at work is the opportunity to make a meaningful impact through clear, effective communication. I find fulfillment in helping others to express their ideas with confidence, and  achieve their professional goals.</p>
+<p><strong>Patience:</strong> 5</p>
+<p><strong>Analytical:</strong> 3</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Lack of Recognition: When efforts and achievements go unnoticed or unappreciated.
+Poor Leadership: Ineffective or unsupportive management can lead to dissatisfaction.
+Lack of Growth Opportunities: No room for professional or personal development.
+Unclear Expectations: Not knowing what is expected can create confusion and stress.
+Toxic Work Environment: Negative workplace culture, including gossip, favoritism, or discrimination.
+Low Compensation: Feeling underpaid or unfairly compensated for the work done.
+Work Overload: Excessive tasks without adequate support or resources.
+Lack of Work-Life Balance: Too much work, leaving no time for personal life.
+Job Insecurity: Fear of losing a job or instability in the company.
+Lack of Purpose: Not feeling connected to the mission or goals of the organization.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : SOC Analyst junior
+SOC Analyst Intermediate
+SOC Shift Lead
+Cyber Defense Front line manager
+SOC Associate Manager</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 1</p>
+<p><strong>Favorite Food:</strong> korean food</p>
+<p><strong>Favorite Sport:</strong> swimming</p>
+<p><strong>Favorite Book:</strong> harry potter</p>
+<p><strong>Favorite Art/Music:</strong> old Reggaeton, Electronic</p>
+<p><strong>Favorite DIY:</strong> Crafting, Lettering, painting, drawing</p>
+<p><strong>Impactful Books:</strong> "Your Soul’s Plan: Discovering the Real Meaning of the Life You Planned Before You Were Born" - Robert Schwartz
+"The Wisdom of the Enneagram" - Russ Hudson and Don Richard Riso</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> The best way to reach out to me for a discussion would be in a friendly and warm, polite, and direct manner, as I tend to lose focus if the request is overly extended.</p>
+<p><strong>Preferred Contact:</strong> Teams Message</p></div></details><details><summary>Christopher King</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Sr Manager, CCI Red Team and Threat Vulnerability Management</p>
+<p><strong>Work Quote:</strong> Discipline Equals Freedom.</p>
+<p><strong>Leadership Philosophy:</strong> A leader leads through strength of example, with integrity and empathy. A good leader knows when to adapt their leadership style to the situation and is an enabler, encouraging their people to also learn how to become good leaders.</p>
+<p><strong>Top 5 Strengths:</strong> Analytical, Learner, Relator, Deliberative, Strategic</p>
+<p><strong>Describe what motivates you most at work:</strong> : The opportunity to do the things I do best every day - developing motivated team members, strategically solving problems, and taking the organization to each next level as a team.</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: I'm demotivated by inefficiency, poor leadership, lack of accountability, lack of integrity, and unnecessary obstacles because I value directness, execution, and continuous growth over politics.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Sr Manager
+Sr Staff Engineer
+Helicopter Pilot in Command</p>
+<p><strong>Belief:</strong> 1</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Pizza</p>
+<p><strong>Favorite Sport:</strong> Rally Racing</p>
+<p><strong>Favorite Book:</strong> Life 3.0</p>
+<p><strong>Favorite Art/Music:</strong> Painting Miniature Figures / listening to Industrial Synth</p>
+<p><strong>Favorite DIY:</strong> Building computers</p>
+<p><strong>Impactful Books:</strong> The Subtle Art of Not Giving a F*ck, by Mark Manson
+Leadership Strategy and Tactics, by Jocko Willink</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> friendly, but with direct, well-prepared, and solution-oriented communication, keeping discussions purposeful, and free of unnecessary fluff or politics, backed with logic or data as applicable</p>
+<p><strong>Preferred Contact:</strong> Email</p></div></details><details><summary>Rowena Casey</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> IT PMO Manager</p>
+<p><strong>Work Quote:</strong> If you are persistent you will get it. If you are consistent you will keep it.</p>
+<p><strong>Leadership Philosophy:</strong> Relaxed and trusting, unless I’ve a reason not to trust. We are OneTeam we are all successful together.</p>
+<p><strong>Top 5 Strengths:</strong> Responsibility, Positivity, Woo, Includer, Maximisier</p>
+<p><strong>Describe what motivates you most at work:</strong> : The people I work with motivate me most</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 3</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Being disrespectful or dismissive of others</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Program manager</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 4</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Too many, but cuisine would be Asian</p>
+<p><strong>Favorite Sport:</strong> Lots…played GAA but I’m a gym bunny now</p>
+<p><strong>Favorite Book:</strong> A thousand splendid suns</p>
+<p><strong>Favorite Art/Music:</strong> Attending music gigs or theatre</p>
+<p><strong>Favorite DIY:</strong> Interior design</p>
+<p><strong>Impactful Books:</strong> 5 dysfunctions of a team - Patrick M. Lencioni</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Informal</p>
+<p><strong>Preferred Contact:</strong> Teams Message, In-Person</p></div></details><details><summary>Varsha Dunnala</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Incident Response Lead</p>
+<p><strong>Work Quote:</strong> The only way to do great work is to love what you do      
+
+AND
+
+You don’t have to be the best, but you have to be the best prepared</p>
+<p><strong>Leadership Philosophy:</strong> My approach to leadership and work is built on resilience, adaptability, and empowerment. As an Incident Response Lead, I thrive in high-pressure environment where quick decision-making and collaboration are crucial. I believe in leading by example, fostering a culture of trust, and ensuring my team feels supported, prepared, and continuously growing. Proactive problem-solving is at the core of my work, allowing me to anticipate challenges before they escalate. I prioritize continuous learning to stay ahead of evolving threats, while also empowering my team to take ownership of their roles and grow into confident professionals. Clear and effective communication is key, especially when engaging with leadership to drive informed decisions. Above all, I embrace resilience and adaptability, learning from setbacks and using every challenge as an opportunity to strengthen our security posture. My ultimate goal is not just to respond to incidents but to build a secure, prepared, and empowered organization.</p>
+<p><strong>Top 5 Strengths:</strong> Restorative | Includer | Responsibility | Consistency | Arranger</p>
+<p><strong>Describe what motivates you most at work:</strong> : Knowing that my work directly contributes to protecting the Stryker from cyber threats keeps me motivated. Helping my team grow and succeed is one of my biggest motivations. I enjoy mentoring others, sharing knowledge, and empowering my team to take ownership of their work. Seeing them develop into skilled professionals gives me great satisfaction.</p>
+<p><strong>Patience:</strong> 5</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Seeing the same issues repeatedly due to lack of action or accountability is frustrating. I’m motivated by problem-solving, but it’s discouraging when fixes aren’t implemented or prioritized properly.
+
+A work culture filled with negativity, blame, or lack of respect among colleagues/teams is incredibly demotivating. 
+
+When team putting in extra effort, handling critical incidents, and going above and beyond without any acknowledgment from leadership/teams can be discouraging.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Incident Response Lead</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 1</p>
+<p><strong>Favorite Food:</strong> Hyderabad Biryani and Chaat</p>
+<p><strong>Favorite Sport:</strong> Cricket</p>
+<p><strong>Favorite Art/Music:</strong> I enjoy drawing and painting as a creative outlet, and I love listening to fast-beat songs that keep me energized and inspired.</p>
+<p><strong>Favorite DIY:</strong> I love making handmade gifts, like custom greeting cards or personalized crafts</p>
+<p><strong>Impactful Books:</strong> I'm not really into reading books, but I love watching documentaries.
+
+Books I read:
+
+Cybersecurity Operations and Fusion Centers - Kevin Lynn McLaughlin
+Intelligence - Driven Incident Response - Rebekah Brown &amp; Scott J. Roberts - Still reading</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> I’m approachable and open to discussions, whether casual or structured, depending on the topic.</p>
+<p><strong>Preferred Contact:</strong> In-Person, Teams Message, Phone, Signal/Whatsapp</p></div></details><details><summary>Adrian Dempsey</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Sr IT Manager</p>
+<p><strong>Work Quote:</strong> "Son, if you really want something in this life, you have to work for it. Now quiet! They’re about to announce the lottery numbers.” – Homer Simpson</p>
+<p><strong>Leadership Philosophy:</strong> I use the Servant leadership style. This style values trust, loyalty and teamwork. It increases job satisfaction and productivity, and creates a positive work culture.</p>
+<p><strong>Top 5 Strengths:</strong> Harmony, restorative, Arranger, consistency, deliberative</p>
+<p><strong>Describe what motivates you most at work:</strong> : Supporting the team to be successful. Their success is my success!</p>
+<p><strong>Patience:</strong> 5</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Not having a challenge</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : .</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 1</p>
+<p><strong>Favorite Food:</strong> Steak and chips</p>
+<p><strong>Favorite Sport:</strong> Fishing</p>
+<p><strong>Favorite Art/Music:</strong> Rock from the 70-90s</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Depends on the discussion</p>
+<p><strong>Preferred Contact:</strong> Teams Message, Email</p></div></details><details><summary>George Bustelo</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Sr. Director, IT Business Partner Manufacturing</p>
+<p><strong>Work Quote:</strong> "The problem isn't setting a high goal and just missing it. The problem is setting a low goal and achieving it." (Kevin Lobo said this at the GQO Summit 2025 when talking about the difference between Stryker and our competitors).</p>
+<p><strong>Leadership Philosophy:</strong> My job as a leader is to:
+- Remove roadblocks for my team
+- Give direction on where we want to get to (not necessarily how to get there)
+- Shield my team from unnecessary distractions
+
+Additionally, I believe in helping people develop themselves and their careers, always keeping in mind the three-legged stool:
+- What do you enjoy doing?
+- What are you good at?
+- What does the organization need?</p>
+<p><strong>Top 5 Strengths:</strong> 1. Responsibility
+2. Achiever
+3. Relator
+4. Arranger
+5. Learner</p>
+<p><strong>Describe what motivates you most at work:</strong> : Being challenged, learning, and making a difference (on the organization as a whole, on my team's lives and careers, and in our customers and patients' lives).</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 3</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Giving up without even trying, and/or "we've always done it this way"
+
+Just because a mountain is very high, that does not mean that we can't get past it... sometimes we just need to be creative and look for alternate ways (go around the mountain instead of climbing it, or drill a tunnel and go through it).</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Manager, Global SAP Delivery
+IT Business Relationship Manager for Supply Chain, Procurement, Sales and Marketing
+Director, IT Project Delivery (Applications, Infrastructure, Cybersecurity)</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 4</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Steak for dinner, and creme brulee for dessert.</p>
+<p><strong>Favorite Sport:</strong> Anything on TV with friends at a bar</p>
+<p><strong>Favorite Book:</strong> Pet Semetary by Stephen King</p>
+<p><strong>Favorite Art/Music:</strong> Listening to music</p>
+<p><strong>Favorite DIY:</strong> Wood working / building (I'm not good at it, but I enjoy it)</p>
+<p><strong>Impactful Books:</strong> Who Moved My Cheese - Spencer Johnson, M.D. 
+The Four Obsessions of an Extraordinary Executive - Patrick Lencioni</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Informal, but with clear expectations of what we're trying to accomplish is best.</p>
+<p><strong>Preferred Contact:</strong> Teams Message, In-Person, Phone</p></div></details><details><summary>Waverly Edwards</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Principal Security Architect</p>
+<p><strong>Work Quote:</strong> It always seems impossible until it's done -- Nelson Mandela</p>
+<p><strong>Leadership Philosophy:</strong> My approach to leadership is mission-oriented, collaborative, risk-aware and adaptive, ensuring alignment with organizational goals while fostering innovation, security, and compliance. I prioritize strategic execution, and scalable solutions, embedding cybersecurity and governance into our initiatives to drive operational excellence.</p>
+<p><strong>Top 5 Strengths:</strong> 1. Achiever, 2. Learner, 3. Deliberative, 4. Restorative, 5. Relator</p>
+<p><strong>Describe what motivates you most at work:</strong> : I’m motivated by solving complex problems, improving security and compliance, and ensuring efficient, scalable solutions.  Its the challenge of the problem, the research, learning and finally coming up with a 'win-win' solution whenever possible.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 3</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: I am demotivated by short-term solutions, poorly defined objectives, and decisions that ignore security, or long-term impact.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Principal Security Architect, Cybersecurity Engineer, Cyber Systems Operations</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Chicken Tikka Masala</p>
+<p><strong>Favorite Sport:</strong> Gymnastics (observe), Bowling (participate)</p>
+<p><strong>Favorite Book:</strong> The Tipping Point</p>
+<p><strong>Favorite Art/Music:</strong> Spoken Word</p>
+<p><strong>Favorite DIY:</strong> Writing computer programs</p>
+<p><strong>Impactful Books:</strong> Make Your Bed, William McRaven
+Freakonomics, Stephen J. Dubner and Steven Levitt</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> To the point -- as I am irritated by 20 minutes of pleasantries.</p>
+<p><strong>Preferred Contact:</strong> Teams Message, Email</p></div></details><details><summary>Jessica Lee</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Sr. Manager, Cybersecurity Infrastructure and Security</p>
+<p><strong>Work Quote:</strong> Teamwork makes the dream work</p>
+<p><strong>Leadership Philosophy:</strong> My leadership style is collaborative and growth-oriented, fostering a supportive environment where my team can develop their skills, contribute meaningfully, and thrive both personally and professionally.</p>
+<p><strong>Top 5 Strengths:</strong> Learner
+Futuristic
+Input
+Arranger
+Achiever</p>
+<p><strong>Describe what motivates you most at work:</strong> : Learning and growing and having a positive impact on those around me.</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: General lack of recognition</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Sr. Manager, IT Transformation (Accelerate)
+Sr. IT PMO Manager, M&amp;A and Corporate Functions
+Sr. Manager, Cybersecurity</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 1</p>
+<p><strong>Favorite Food:</strong> Pizza</p>
+<p><strong>Favorite Sport:</strong> Soccer</p>
+<p><strong>Favorite Book:</strong> Too many to count</p>
+<p><strong>Favorite Art/Music:</strong> Seeing Broadway shows</p>
+<p><strong>Favorite DIY:</strong> Any home improvement project</p>
+<p><strong>Impactful Books:</strong> Radical Candor, Kim Scott
+Dare to Lead, Brene Brown</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Warm and friendly but keep messaging/ask concise.</p>
+<p><strong>Preferred Contact:</strong> Email, Teams Message, In-Person, Text/Signal, Phone</p></div></details><details><summary>Mahesh Behede</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Manager - Cybersecurity (SAP/JDE - ERP Security)</p>
+<p><strong>Work Quote:</strong> Continues Improvement and Do-little things right</p>
+<p><strong>Leadership Philosophy:</strong> Continuous Learning, Enhancing Soft Skills, Work processes and positive mindset</p>
+<p><strong>Top 5 Strengths:</strong> 1. IDEATION2. ARRANGER 3. ANALYTICAL 4. CONTEXT 5. SELF-ASSURANCE</p>
+<p><strong>Describe what motivates you most at work:</strong> : New Skills and challenges which motivates me to learn new things/tools and challenges me to deliver those and contribute to the company mission and vision</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: By-pass the process
+involved in project at last minute</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Sr Manager Cybersecurity 
+Director Cybersecurity 
+Sr Director Cybersecurity</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 4</p>
+<p><strong>Self-Centeredness:</strong> 4</p>
+<p><strong>Favorite Food:</strong> Indian Cuisine</p>
+<p><strong>Favorite Sport:</strong> Cricket &amp; Tennis</p>
+<p><strong>Favorite Book:</strong> Harry Potter and Fiction</p>
+<p><strong>Favorite Art/Music:</strong> Indian Bollywood Music</p>
+<p><strong>Favorite DIY:</strong> In House customization like shelfs and partitions</p>
+<p><strong>Impactful Books:</strong> The Bhagavad Gita
+The God of small things by Arundhati Roy</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Teams connect and friendly F2F connect</p>
+<p><strong>Preferred Contact:</strong> Teams Message, In-Person, Phone, Email</p></div></details><details><summary>Stephen McKnight</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Director in Product Security</p>
+<p><strong>Work Quote:</strong> Do you like to work nights, weekends and holidays? I don’t either, so let’s build this correctly to avoid Incident Response. Stephen McKnight</p>
+<p><strong>Leadership Philosophy:</strong> Collaborate to look at the science, then plan accordingly.</p>
+<p><strong>Top 5 Strengths:</strong> Restorative, Self-Assurance, Strategic, Relator, Arranger</p>
+<p><strong>Describe what motivates you most at work:</strong> : Reducing risk using simple controls. Seeing the impact on the larger picture instead of a singular vulnerability.</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Reactions to a singular datapoint without context of what the impact on the eco-system is…</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : 10 years in consulting leadership at Deloitte - Security &amp; Privacy for clients across most industries, plus 10 years leadership in Product Security for two automotive OEM’s, which translates well for a Medical Device Manufacturer like Stryker (1 year).</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 4</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> A good grilled steak, potatoe and 2 side vegetables.</p>
+<p><strong>Favorite Sport:</strong> Watching NFL, playing ice hockey</p>
+<p><strong>Favorite Book:</strong> nothing comes to mind</p>
+<p><strong>Favorite Art/Music:</strong> all music genres depending on mood and setting</p>
+<p><strong>Favorite DIY:</strong> Everything: house, auto, etc</p>
+<p><strong>Impactful Books:</strong> nothing comes to mind</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> informal, warm and friendly is best.</p>
+<p><strong>Preferred Contact:</strong> Teams Message, In-Person, Email, Phone</p></div></details><details><summary>Monika Bubela</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Manager CCI Fusion Centre</p>
+<p><strong>Work Quote:</strong> Team work makes dream work!</p>
+<p><strong>Leadership Philosophy:</strong> My leadership approach emphasizes empowerment, trust, and clear communication. I strive to empower team members by entrusting them with responsibilities and maintaining open lines of communication to ensure alignment on goals and expectations. I prioritize support for individual growth through targeted training and mentorship, fostering an environment of continuous learning and adaptability. I promote inclusivity and collaboration, valuing diverse opinions and encouraging team bonding through shared projects. Additionally, I recognize hard work and provide constructive feedback to aid development. By setting a clear vision and direction, I align the team’s efforts with the broader organizational objectives, ensuring everyone understands their role in achieving success.</p>
+<p><strong>Top 5 Strengths:</strong> Relator, Focus, Achiever, Context, Consistency</p>
+<p><strong>Describe what motivates you most at work:</strong> : What motivates me most at work is the opportunity to solve complex problems and make a meaningful impact. I thrive on challenges that require creative and strategic thinking, especially those that can significantly improve the way we operate or deliver services. Additionally, seeing the growth and development of my team members as they tackle new challenges and expand their skills is incredibly rewarding. I'm driven by the pursuit of excellence and the chance to lead initiatives that not only meet but exceed expectations, contributing positively to the organization's goals and success.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Unclear goals and objectives. Lack of clear targets. But the most demotivating is bad atmosphere where decisions are not communicated and employees can't trust the leadership.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Threat Intelligence Analyst (Global CISO Team, Aviva London), CISO (Perseus GmbH, Germany), Judical Clerk/Analyst at Interpol (Warsaw).</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Salmon</p>
+<p><strong>Favorite Sport:</strong> Hiking</p>
+<p><strong>Favorite Book:</strong> Anna Karenina by Leo Tolstoi</p>
+<p><strong>Favorite Art/Music:</strong> Art Deco style, 20's-40's music, movies, and outfits</p>
+<p><strong>Favorite DIY:</strong> Painting</p>
+<p><strong>Impactful Books:</strong> Shogun - James Clavell
+Sinuhe - Mika Waltari</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Just approach and be kind :)</p>
+<p><strong>Preferred Contact:</strong> Teams Message</p></div></details><details><summary>Alex Immekus</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> IT Sr Manager - Support Services</p>
+<p><strong>Work Quote:</strong> “If you don’t have time to do it right, when will you have time to do it over?” – John Wooden</p>
+<p><strong>Leadership Philosophy:</strong> My approach to leadership and work is centered on efficiency, accountability, and continuous improvement. I believe in setting clear expectations, empowering teams with the right tools and support, and fostering a culture of ownership and learning.
+
+I prioritize data-driven decision-making to optimize performance, ensuring that processes are streamlined and impactful. At the same time, I emphasize collaboration and communication, recognizing that success comes from a well-aligned team that shares a common vision.
+
+Ultimately, my goal is to lead with integrity and practicality, ensuring that work is done right the first time while always looking for ways to refine and improve.</p>
+<p><strong>Top 5 Strengths:</strong> Achiever
+Responsibility
+Self-Assurance
+Arranger
+Harmony</p>
+<p><strong>Describe what motivates you most at work:</strong> : I am motivated by efficiency, problem-solving, and continuous improvement, striving to optimize operations and drive high performance. I take pride in leading teams, delivering quality results, and implementing impactful process improvements, while also seeking opportunities to broaden your expertise and grow in my role.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 3</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: I get demotivated by inefficiency, lack of accountability, and resistance to improvement - when processes are outdated, expectations aren’t upheld, or necessary changes face unnecessary pushback. I also find it frustrating when communication is unclear, goals are ambiguous, or there’s a lack of growth opportunities, as I thrive in environments that focus on results, collaboration, and continuous learning.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Deskside Tech
+Central Region Manager - US
+IT Sr Manager - Americas</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 4</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Mexican</p>
+<p><strong>Favorite Sport:</strong> Football</p>
+<p><strong>Favorite Book:</strong> “The Five Levels of Leadership” by John C. Maxwell</p>
+<p><strong>Favorite Art/Music:</strong> Country</p>
+<p><strong>Favorite DIY:</strong> Building various things for our camping property</p>
+<p><strong>Impactful Books:</strong> “The Five Levels of Leadership” by John C. Maxwell
+“Leaders Eat Last” – Simon Sinek</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> The best way to approach me for a discussion is with a clear purpose and an open mindset. I appreciate when people come prepared but also enjoy a good back-and-forth conversation where we can brainstorm solutions together. Always happy to work through things together.</p>
+<p><strong>Preferred Contact:</strong> In-Person, Teams Message, Phone</p></div></details><details><summary>Colleen Loomis</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Manager, Information Security</p>
+<p><strong>Work Quote:</strong> Do the little things right</p>
+<p><strong>Leadership Philosophy:</strong> Lead by Example: Actions speak louder than words and I always strive to do as I say. Rules should apply to all levels of an organization. 
+
+Teach to Fish: I want to give others the skills/knowledge to function independently.</p>
+<p><strong>Top 5 Strengths:</strong> Discipline
+Input
+Deliberative
+Learner
+Achiever</p>
+<p><strong>Describe what motivates you most at work:</strong> : Working/Collaborating with other people</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 3</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Busy work, 'babysitting' colleagues to ensure work is done, doing work without understanding how it fits into the big picture or adds value</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Manager, Information Security (Compliance)
+Senior Lead Analyst, Quality Management
+Lead Document Control Coordinator</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Sushi</p>
+<p><strong>Favorite Sport:</strong> American Football</p>
+<p><strong>Favorite Book:</strong> Eleanor Oliphant is Completely Fine</p>
+<p><strong>Favorite Art/Music:</strong> Puzzles</p>
+<p><strong>Favorite DIY:</strong> Decluttering</p>
+<p><strong>Impactful Books:</strong> I pretty much only read fiction...so this is what I have to say:
+"The Future" &amp; "The Power" (two separate books) both by Naomi Alderman
+Little Women by Louisa May Alcott</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> informal: I do love to chat and get to know people, but only if I'm in the right frame of mind. For example, if I'm busy and have work to do, I'll cut you short and get to the task at hand. But if I have the spare time, I'm happy to talk!</p>
+<p><strong>Preferred Contact:</strong> Teams Message</p></div></details><details><summary>Harish Kandalam</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Associate Director - Cybersecurity Operations</p>
+<p><strong>Work Quote:</strong> "We are only as strong as we are united, as weak as we are divided." – J.K. Rowling</p>
+<p><strong>Leadership Philosophy:</strong> I lead with integrity, accountability, and a people-centric mindset, ensuring my team feels supported, empowered, and valued. I believe in fairness and transparency, creating an environment where individuals can thrive and contribute effectively.
+My approach is strategic and forward-thinking, focusing on long-term impact while staying adaptable to evolving business needs. I emphasize proactive problem-solving, ensuring risks are identified and mitigated before they escalate.
+I prioritize team development, recognizing that success isn’t just about results but also about nurturing talent, fostering collaboration, and maintaining a strong work ethic. I lead with a selfless yet decisive approach, ensuring that both the business and my team grow together.</p>
+<p><strong>Top 5 Strengths:</strong> Arranger , Achiever, Learner , Responsibility, Relator</p>
+<p><strong>Describe what motivates you most at work:</strong> : Seeing my team succeed, develop, and contribute meaningfully to our goals keeps me energized. I take pride in building strong, high-performing teams, creating a culture where people feel valued, empowered, and aligned with a common purpose.</p>
+<p><strong>Patience:</strong> 5</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: I find it demotivating when people fail to respect each other based on hierarchy or undervalue someone’s contributions simply because their role may not seem as impactful. Every individual plays a role in the bigger picture, and a lack of mutual respect disrupts a healthy work environment.
+Credit stealing is another major demotivator—I believe in recognizing and appreciating the efforts of those who truly contribute. Similarly, judging people without understanding their challenges is something I strongly dislike. Everyone has their own struggles, and making assumptions without stepping into their shoes goes against the principles of fairness and empathy that I value.
+A collaborative and respectful workplace is what drives me, and anything that goes against these principles can be discouraging.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Team Lead
+SOC Manager
+Associate Director - Cybersecurity Operations</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 5</p>
+<p><strong>Favorite Food:</strong> Hyderabadi Biryani</p>
+<p><strong>Favorite Sport:</strong> Cricket</p>
+<p><strong>Favorite Book:</strong> The No Complaining Rule  - Jon Gordon</p>
+<p><strong>Favorite Art/Music:</strong> Guitar</p>
+<p><strong>Favorite DIY:</strong> Wall Painting</p>
+<p><strong>Impactful Books:</strong> The No Complaining Rule  - Jon Gordon
+How full is your bucket? - Tom Rath and Donald O.Clifton</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Just say Hi :)</p>
+<p><strong>Preferred Contact:</strong> Email, Phone, Teams Message, In-Person</p></div></details><details><summary>Vinay Bhatia</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Director, Digital Application Cybersecurity</p>
+<p><strong>Work Quote:</strong> "Education is the most powerful weapon which you can use to change the world." ~Nelson Mandela</p>
+<p><strong>Leadership Philosophy:</strong> Collaboration: Fostering teamwork and valuing diverse perspectives.
+Patience and Perseverance: Remaining steadfast in the face of adversity and taking a long-term view.
+Vision and Inspiration: Articulating a clear and compelling vision and inspiring others to achieve it.
+Empowerment: Giving others the autonomy and resources to succeed.
+Focus on Impact: Prioritizing the well-being and growth of the team and the achievement of collective goals.</p>
+<p><strong>Top 5 Strengths:</strong> Learner
+Input
+Achiever
+Arranger
+Connectedness</p>
+<p><strong>Describe what motivates you most at work:</strong> : Fulfillment in the work that I do makes an impact on patient care and makes healthcare better.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Things that can demotivate me are:
+- Lack of purpose and meaning
+- Toxic work culture
+- Lack of growth and development opportunities
+
+We're fortunate to be part of an organization that does not have this problem.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Sr. Manager, Digital Security Operations
+Digital Product Manager
+IS Product Manager</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> A lot! I'm a foodie. If I had to pick - Lindt chocolate.</p>
+<p><strong>Favorite Sport:</strong> Boxing</p>
+<p><strong>Favorite Book:</strong> Harry Potter book series</p>
+<p><strong>Favorite Art/Music:</strong> 80s rock</p>
+<p><strong>Favorite DIY:</strong> Raspberry Pi projects. Definitely interested in setting up one in the future.</p>
+<p><strong>Impactful Books:</strong> The Daily Stoic - Ryan Holiday
+Mandela's Way: Lessons on Life, Love, and Courage - Richard Stengel, Nelson Mandela</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Teams call. Informal. Always up for a warm and friendly conversation.</p>
+<p><strong>Preferred Contact:</strong> Teams Message, In-Person, Phone</p></div></details><details><summary>Andrea Marote</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Security Automation Associate Manager</p>
+<p><strong>Work Quote:</strong> "Efficiency is intelligent laziness." 
+"Simplicity is the ultimate sophistication" 
+and taken from Erik Elliot's Teams Status but stuck to my head ever since " "The consciousness of good intentions disdains ambiguity."</p>
+<p><strong>Leadership Philosophy:</strong> I take a democratic approach to leadership. I make sure everyone feels involved, has a voice, and that their ideas are heard. A safe space for suggestions and discussions is key, and I validate new procedures or improvements with my team before rolling them out or discussing it with the chain of command.
+
+I promote accountability by giving ownership to analysts and ensuring they feel confident to ask questions. I trust my team to handle their responsibilities, so there’s no micromanaging. Instead, I focus on removing roadblocks and making things smoother, so they can do their job effectively.
+
+Knowledge transfer is a priority, and I believe in recurrent workshops, hands-on learning, and continuous upskilling, whether through internal sessions or external resources. Keeping the team learning and growing is just as important as keeping automation evolving.</p>
+<p><strong>Top 5 Strengths:</strong> 1. Individualization
+2. Learner
+3. Achiever
+4. Restorative
+5. Strategic</p>
+<p><strong>Describe what motivates you most at work:</strong> : What I do isn’t repetitive, it’s creative. Every project is different, and that’s what keeps it exciting. Each automation solves a unique challenge, and the impact is immediate. Teams get their time back to focus on more important tasks instead of manual, repetitive work. It’s not just about making things more efficient, it’s about enabling people to do higher-value work and making security operations stronger as a whole.
+
+I also enjoy brainstorming and solving problems that others find too messy or complex, but always with a practical mindset. Technology is out there to make things easier, not harder, so I focus on efficiency and simplicity. Figuring out a better way to do things is what drives me. If something can be streamlined, automated, or improved, I’ll find a way to make it happen. I don’t believe in overcomplicating things when a straightforward, effective solution exists. My goal is to make security automation work seamlessly for the people who rely on it.
+
+Beyond the technical work, I know I have a lot of influence, and my empathy helps me connect on a deeper level with colleagues. People often seek me out for both professional and personal advice and seeing them overcome challenges and grow is genuinely fulfilling.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 3</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Inefficiency and unnecessary bureaucracy – When processes are overcomplicated, slow, or create friction instead of solving problems.
+Poor communication – Misalignment, vague expectations, or last-minute changes that could have been avoided with clear communication
+Lack of accountability – When people avoid ownership or don’t follow through on their responsibilities.
+Resistance to change – When people reject improvements or automation because of fear of change.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : API Security and Integrations, Artificial Intelligence, Architecture.</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Fish Tacos</p>
+<p><strong>Favorite Sport:</strong> Mountain Bike</p>
+<p><strong>Favorite Book:</strong> Radical Acceptance by Tara Brach</p>
+<p><strong>Favorite Art/Music:</strong> Painting</p>
+<p><strong>Favorite DIY:</strong> Gardening</p>
+<p><strong>Impactful Books:</strong> Atomic Habits by James Clear
+Mindset: The New Psychology of Success by Carol S. Dweck</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> I'm flexible with how you approach me, as long as communication is honest, direct, and accountable.</p>
+<p><strong>Preferred Contact:</strong> Teams Message, In-Person, Phone</p></div></details><details><summary>Edward Kulb</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Principal Cybersecurity Engineer</p>
+<p><strong>Work Quote:</strong> “If your tools don’t work, make them work. If you can’t make them work, make some that do” - Dr. Homer Stryker</p>
+<p><strong>Leadership Philosophy:</strong> My approach to leadership and work is direct, no-nonsense, and forward-thinking. I value efficiency, clear communication, and results over fluff.  I'm pragmatic, willing to embrace new ideas, and prioritize action over endless discussion. My leadership style involves setting high standards while expecting competence and accountability from those around you.  I respect those who are sharp, resourceful, and proactive.</p>
+<p><strong>Top 5 Strengths:</strong> Adaptability, Communication, Belief, Significance, Ideation</p>
+<p><strong>Describe what motivates you most at work:</strong> : My Primary motivators at work are likely efficiency, results, and progress seen from the eyes of others as much as my own.  I value autonomy—having control over my work and making decisions without unnecessary bureaucracy.  High standards and a strong sense of purpose keep me engaged, and am energized by working with sharp, capable people who can absorb quick brain-dump style training and not require handholding.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Lack of accountability.  Inefficiency, bureaucracy, micromanagement.  Non-intuitive UX/UI in tools, apps, or processes.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Principal Cybersecurity Engineer, Cybersecurity Investigations Manager, Senior Infrastructure and Security Engineer</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Sashimi - White Tuna</p>
+<p><strong>Favorite Sport:</strong> Texas Holdem</p>
+<p><strong>Favorite Book:</strong> From Crook to Cook: Platinum Recipes from Tha Boss Dogg's Kitchen</p>
+<p><strong>Favorite Art/Music:</strong> Numismatics</p>
+<p><strong>Favorite DIY:</strong> Secure &amp; smart home.</p>
+<p><strong>Impactful Books:</strong> Who Moved My Cheese? Spencer Johnson, MD
+Good to Great, Jim Collins</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> informal, to the point</p>
+<p><strong>Preferred Contact:</strong> Email, Phone, In-Person, Teams Message</p></div></details><details><summary>Jordan Alexander</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Manager, IT Information Security, SOX Compliance</p>
+<p><strong>Work Quote:</strong> "Efficiency is doing things right; effectiveness is doing the right things." - Peter Drucker</p>
+<p><strong>Leadership Philosophy:</strong> I believe in understanding and valuing the perspectives and needs of others. This helps in building strong, collaborative relationships.
+I strive to adapt to different situations and challenges effectively. I prioritize staying informed and continuously improving.</p>
+<p><strong>Top 5 Strengths:</strong> Restorative, Harmony, Empathy, Futuristic, Arranger</p>
+<p><strong>Describe what motivates you most at work:</strong> : What motivates me most at work is the opportunity to help and support others. I find great satisfaction in providing accurate information, solving problems, and making the audit easier for both our control owners and auditors. I love that each day is different and brings unique challenges.</p>
+<p><strong>Patience:</strong> 2</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 3</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Lack of motivation from others around me.
+Feeling overwhelmed with tasks, or not knowing what to prioritize</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Manager, IT Information Security, SOX Compliance
+IT Senior Lead Analyst, SOX Compliance
+Senior Associate, IT Quality Assurance (PwC)</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 4</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Pizza</p>
+<p><strong>Favorite Sport:</strong> Hockey</p>
+<p><strong>Favorite Book:</strong> Moneyball - Michael Lewis</p>
+<p><strong>Favorite Art/Music:</strong> Going to concerts</p>
+<p><strong>Favorite DIY:</strong> Working on the backyard</p>
+<p><strong>Impactful Books:</strong> How to Be Perfect: The Correct Answer to Every Moral Question - Michael Schur
+The Purpose Driven Life - Rick Warren</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> informal, via chat or walking up to my desk.</p>
+<p><strong>Preferred Contact:</strong> Email, In-Person, Teams Message</p></div></details><details><summary>Tammy Conklin</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Cybersecurity Awareness Manager</p>
+<p><strong>Work Quote:</strong> See Something, Say Something</p>
+<p><strong>Leadership Philosophy:</strong> My approach to leadership focuses on fostering a collaborative, engaged, and accountable team environment. I prioritize clear communication, setting expectations, and ensuring that every team member feels seen, heard, and valued. I also emphasize proactive problem-solving, continuous learning, and empowering my team to take ownership of their work.</p>
+<p><strong>Top 5 Strengths:</strong> Achiever, Responsibility, Arranger, Consistency, Individualization</p>
+<p><strong>Describe what motivates you most at work:</strong> : I am motivated by teaching and empowering others through Cybersecurity Awareness. I love the creative side of my role, making cybersecurity concepts engaging and useful for employees both at work and at home. The impact of your work drives your passion and fulfillment.</p>
+<p><strong>Patience:</strong> 5</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: A demotivator is feeling restricted in my ability to execute ideas and drive initiatives at the pace I desire. I thrive on creativity and impact, so delays or limitations in my space can be frustrating.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Manager 
+Lead 
+Sr. Analyst</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 1</p>
+<p><strong>Favorite Food:</strong> Italian</p>
+<p><strong>Favorite Sport:</strong> I don't have one</p>
+<p><strong>Favorite Book:</strong> Janet Evanovich, author of the Stephanie Plum series</p>
+<p><strong>Favorite Art/Music:</strong> I don't have a favorite art style, but I enjoy all kinds of music. I'm the type of person who flips through radio channels until I find just the right song that fits my mood. I've been to country concerts and festivals in the past, but I'm not tied to a specific genre—I just like music that resonates in the moment</p>
+<p><strong>Favorite DIY:</strong> I don’t necessarily enjoy DIY projects since they tend to be extensive at my house, but I love designing and decorating once the project is finished.</p>
+<p><strong>Impactful Books:</strong> I don’t read often, but when I do, I enjoy standalone mystery books that focus on the people involved in the story. If I had to pick one, I’d say The No Complaining Rule by Jon Gordon, which Kevin had our team read</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Friendly and to the point</p>
+<p><strong>Preferred Contact:</strong> Teams Message, Email, In-Person, Teams Meeting</p></div></details><details><summary>Rick Shippley</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Manager - Cybersecurity, Cyber Risk, and IT Compliance / ERP Security</p>
+<p><strong>Work Quote:</strong> What have you Improved for Stryker Today?</p>
+<p><strong>Leadership Philosophy:</strong> I believe in fostering a collaborative and open work environment where team members feel empowered and supported. I promote an open-door policy, encourage automata. And avoid micromanagement, trusting my team to take ownership of their work. I remain level-headed in challenges, striving to offer practical solutions and multiple resolution paths when issues arise. My goal is to create a balanced and productive workplace built on trust, communication, and problem-solving.</p>
+<p><strong>Top 5 Strengths:</strong> Achiever, Belief, Responsibility, Includer, Positivity</p>
+<p><strong>Describe what motivates you most at work:</strong> : Empowering Others, Problem-Solving, Collaboration and Open Communication and Making an Impact</p>
+<p><strong>Patience:</strong> 5</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Micro-management, Lack of Communication, Unnecessary Bureaucracy, Negativity &amp; Drama, Lack of Solutions-Oriented Thinking</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Manager - Stryker, SPX
+Managing Consultant - IBM
+Principal Security Architect SAP - IBM</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Poultry</p>
+<p><strong>Favorite Sport:</strong> Football</p>
+<p><strong>Favorite Book:</strong> The Dubliners by James Joyce</p>
+<p><strong>Favorite Art/Music:</strong> All Art / Anything Rock - RUSH, Pink Floyd, Ozzy</p>
+<p><strong>Favorite DIY:</strong> Working on Home Projects</p>
+<p><strong>Impactful Books:</strong> The Dubliners by James Joyce
+The Five People You Meet in Heaven - Mitch Albom</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Warm an friendly</p>
+<p><strong>Preferred Contact:</strong> Email, Phone, In-Person, Teams Message</p></div></details><details><summary>Derek Wang</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Senior Manager, China Cybersecurity Operations</p>
+<p><strong>Work Quote:</strong> There are no failures–just experiences and your reactions to them.</p>
+<p><strong>Leadership Philosophy:</strong> Align global strategy with local execution while building strong teams.</p>
+<p><strong>Top 5 Strengths:</strong> Relator Achiever Responsibility Learner Arrange​</p>
+<p><strong>Describe what motivates you most at work:</strong> : Driving strategic initiatives that make a lasting impact.</p>
+<p><strong>Patience:</strong> 5</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Lack of clear direction or alignment.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Stryker – Senior Manager, China Cybersecurity Operations.​
+
+Deloitte – Associate Director, Risk Advisory - Cyber
+
+IBM – Senior Consultant, SAP Basis and security</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Spicy beef</p>
+<p><strong>Favorite Sport:</strong> Tennis</p>
+<p><strong>Favorite Book:</strong> Flipped</p>
+<p><strong>Favorite Art/Music:</strong> Exploring traditional Chinese music as a way to connect with culture and history.</p>
+<p><strong>Favorite DIY:</strong> Exploring smart home automation projects.</p>
+<p><strong>Impactful Books:</strong> The Courage to Be Disliked, Ichiro Kishimi and Fumitake Koga
+Your Child is Not Your Child, Xiaole Wu</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> open, honest, and to-the-point discussions</p>
+<p><strong>Preferred Contact:</strong> In-Person, Teams Message</p></div></details><details><summary>Mechelle Tippets</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Sr Manager IT SOX Compliance</p>
+<p><strong>Work Quote:</strong> None of us is as mart as all of us</p>
+<p><strong>Leadership Philosophy:</strong> Everyone is a leader...everyone has a voice, regardless of title. I do work hard, but keeping focus on priorities is essential to making sure time is spent on the most important things. It goes along with Kevin's "be productive, not busy" philosophy.</p>
+<p><strong>Top 5 Strengths:</strong> Arranger, Connectedness, Woo, Positivity, Responsibility, Learner</p>
+<p><strong>Describe what motivates you most at work:</strong> : Knowing that what I do is contributing to Stryker's financial well-being</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 2</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 3</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Incompetence; working with people who do not carry their weight and contribute</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Sr Manager Global IT SOX Compliance 
+IT Quality Associate
+Senior Technical Writer</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 5</p>
+<p><strong>Favorite Food:</strong> Seafood; sweets (ice-cream, Belgian chocolate)</p>
+<p><strong>Favorite Sport:</strong> not much of a sports fan; I do like to do swim/water fitness</p>
+<p><strong>Favorite Book:</strong> Under the Tuscan Sun</p>
+<p><strong>Favorite Art/Music:</strong> big art and music fan. Art: Matisse (cutouts series), John Singer Sargent; I am a classical singer (opera), love most classical music, jazz, Broadway, love seeing live music</p>
+<p><strong>Favorite DIY:</strong> Gardening; designing and planting pots; interior decorating</p>
+<p><strong>Impactful Books:</strong> The Art of Possibility by Benjamin Zander</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Informal approach, but then get to the point</p>
+<p><strong>Preferred Contact:</strong> Teams Message</p></div></details><details><summary>Martin Howley</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Senior Manager, Cybersecurity, IT Assurance</p>
+<p><strong>Work Quote:</strong> “Success is not final, failure is not fatal: It is the courage to continue that count.” – Winston Churchill</p>
+<p><strong>Leadership Philosophy:</strong> Servant leadership is a philosophy and leadership style that emphasizes serving others and prioritizing their needs, focusing on empowering and developing individuals rather than solely on achieving results or wielding power.</p>
+<p><strong>Top 5 Strengths:</strong> 1. Connectedness
+2. Relator
+3. Ideation
+4. Strategic
+5. Learner</p>
+<p><strong>Describe what motivates you most at work:</strong> : At work, I'm motivated by achieving tangible results, learning and growing, and contributing to a positive team environment. I find satisfaction in completing tasks effectively, developing new skills, and collaborating with others to achieve common goals.</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Lack of psychological safety. 
+Unclear Goals &amp; Expectations – Uncertainty about job responsibilities
+Growth Opportunities – No clear career path.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Director of Compliance Assurance.
+Senior IT Risk &amp; Compliance Manager.
+Director of Cyber Risk &amp; Data Analytics</p>
+<p><strong>Belief:</strong> 2</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Latin</p>
+<p><strong>Favorite Sport:</strong> Scuba Diving</p>
+<p><strong>Favorite Book:</strong> The Minds of Billy Milligan</p>
+<p><strong>Favorite Art/Music:</strong> Painting</p>
+<p><strong>Favorite DIY:</strong> Gardening</p>
+<p><strong>Impactful Books:</strong> To Kill a Mockingbird, by Harper Lee
+Brave New World, by Aldous Huxley</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> friendly but to the point.</p>
+<p><strong>Preferred Contact:</strong> Phone with an email follow on</p></div></details><details><summary>Mindy Bush</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> IT Assurance Manager</p>
+<p><strong>Work Quote:</strong> “It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming; but who does actually strive to do the deeds; who knows great enthusiasms, the great devotions; who spends himself in a worthy cause; who at the best knows in the end the triumph of high achievement, and who at the worst, if he fails, at least fails while daring greatly, so that his place shall never be with those cold and timid souls who neither know victory nor defeat.” - Teddy Roosevelt, 1910</p>
+<p><strong>Leadership Philosophy:</strong> I approach leadership with a three-fold philosophy:
+
+1. Hire people who are smarter than me and empower them to succeed. I don’t need to be the smartest person in the room—my goal is to build a team of highly capable individuals and give them the tools, training, and support they need to excel. By equipping them with the right knowledge and processes, we elevate both individual success and the success of the team as a whole.
+
+2. Prioritize people first, employees second. I believe that caring about my team as individuals creates an environment where they can thrive. I take the time to understand what matters to them and support them accordingly. There’s a well-known saying: People don’t leave jobs; they leave managers. I want my team to feel valued and supported, knowing that I’m invested in their growth, well-being, and success—not just as employees, but as people. When they succeed, the team succeeds, and ultimately, Stryker benefits, as well.
+
+3. Seek input and buy-in from the team. Leadership isn’t about dictating decisions—it’s about collaboration. While there are rare occasions where I have to make unilateral decisions, my default approach is to involve the team. I explain what needs to be done and why, then work with them to determine the best path forward. This ensures alignment, fosters ownership, and ultimately leads to better outcomes.</p>
+<p><strong>Top 5 Strengths:</strong> Individualization, Strategic, Intellection, Empathy, Adaptability</p>
+<p><strong>Describe what motivates you most at work:</strong> : Relationships! I don’t do things just for the sake of doing them; I do them for someone. When I work to complete tasks or to improve a process, efficiency and business impact are always on my radar, but my real motivation comes from understanding who will benefit from the work. It’s never just about what needs to be done; it’s about who it helps.
+
+For example, when I think about the work my team does, I see it from both a high-level perspective - supporting patient safety in alignment with Stryker’s mission - but also through a more personal lens. If the FDA walked in tomorrow for an audit, I want the Stryker employee responsible for presenting validation evidence to have everything they need to succeed. I want them to easily find the right documentation and clearly understand the story behind it, so they can confidently navigate the conversation. That’s what drives me.
+
+When I feel stressed or demotivated, I reconnect with that sense of purpose by reaching out to a colleague for a quick chat. A small moment of connection helps ground me.
+
+I don’t work hard for the nameless, faceless Stryker; I work hard for the people around me and the patients we serve.</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Feeling like I am unable to succeed no matter what, false deadlines, feeling like I’m doing work for the sake of doing work, not feeling supported by leadership.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : IT Quality Assurance Manager (Wright Medical) and IT Assurance Manager (Stryker)</p>
+<p><strong>Belief:</strong> 3</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Pineapple</p>
+<p><strong>Favorite Sport:</strong> What’s a sport?</p>
+<p><strong>Favorite Book:</strong> Mistborn by Brandon Sanderson</p>
+<p><strong>Favorite Art/Music:</strong> Stand-up comedy</p>
+<p><strong>Favorite DIY:</strong> Painting rooms, gardening</p>
+<p><strong>Impactful Books:</strong> 1. Daring Greatly by Brené Brown
+2. Small Great Things by Jodi Picoult
+
+(Honorable mentions: Blink by Malcolm Gladwell and American Dirt by Jeanine Cummins)</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> To the point and friendly</p>
+<p><strong>Preferred Contact:</strong> Teams Message, Phone</p></div></details><details><summary>Andrew Phelps</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Build Lead</p>
+<p><strong>Work Quote:</strong> Trust but verify.</p>
+<p><strong>Leadership Philosophy:</strong> Lead by example, be honest in your interactions, and always be cognizant of others time.</p>
+<p><strong>Top 5 Strengths:</strong> Restorative
+Achiever
+Communication
+Analytical
+Responsibility</p>
+<p><strong>Describe what motivates you most at work:</strong> : Recognition</p>
+<p><strong>Patience:</strong> 5</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Work avoidance
+Missed meetings/deadlines
+Processes that don't add value but delay results
+Hunger</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Senior Network Administrator
+Senior Analyst
+Build Lead</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 2</p>
+<p><strong>Self-Centeredness:</strong> 1</p>
+<p><strong>Favorite Food:</strong> Chicken Tikka Masala. Rice, Broccoli, Naan</p>
+<p><strong>Favorite Sport:</strong> Fishing</p>
+<p><strong>Favorite Book:</strong> The Alloy of Law - Brandon Sanderson</p>
+<p><strong>Favorite Art/Music:</strong> General listening, always have music playing</p>
+<p><strong>Favorite DIY:</strong> Woodwork</p>
+<p><strong>Impactful Books:</strong> The Phoenix Project - Gene Kim
+The Unicorn Project - Gene Kim</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> bluntly, I'm vary easy to approach</p>
+<p><strong>Preferred Contact:</strong> Teams Message</p></div></details><details><summary>Joshua Wallner</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> IT SOX Compliance Manager</p>
+<p><strong>Work Quote:</strong> Anything worth doing is worth doing right the first time.</p>
+<p><strong>Leadership Philosophy:</strong> I lead by example while encouraging all voices to be heard on the team. All ideas and thoughts are welcome.</p>
+<p><strong>Top 5 Strengths:</strong> Analytical
+Restorative
+Competition
+Learner
+Responsibility</p>
+<p><strong>Describe what motivates you most at work:</strong> : The new frontier! New problems and challengers to solve are like a puzzle for figuring out the most efficient, quality and best way to go about tackling them.</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Not knowing the "why" behind why something is needed</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Stryker - IT SOX Compliance Manager
+EY - IT Risk Assurance Senior
+West Michigan ISACA - Director at Large</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 4</p>
+<p><strong>Favorite Food:</strong> Steak</p>
+<p><strong>Favorite Sport:</strong> Cycling</p>
+<p><strong>Favorite Book:</strong> The Road</p>
+<p><strong>Favorite Art/Music:</strong> Rock concerts</p>
+<p><strong>Favorite DIY:</strong> Gardening</p>
+<p><strong>Impactful Books:</strong> Crucial Conversations</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> To the point</p>
+<p><strong>Preferred Contact:</strong> Teams Message, Email</p></div></details><details><summary>Neil Cremen</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> EUS IT Technology Transformation, Snr Mgr</p>
+<p><strong>Work Quote:</strong> Coming together is a beginning; keeping together is progress; working together is success. (Henry Ford)</p>
+<p><strong>Leadership Philosophy:</strong> My leadership and work philosophy are similar - lead by example, do all the jobs you can to understand how things work, and find ways to make them work better.  Bringing people together to get perspectives can only help you deliver a better solution.  Finally, things are never absolutes, they are always shades of grey.</p>
+<p><strong>Top 5 Strengths:</strong> Arranger, Achiever, Communication, Developer, Positivity</p>
+<p><strong>Describe what motivates you most at work:</strong> : People and connections are great motivators, finding the joy in the big and small wins, and taking time to realise (by reading around our vast connect site and masses of information) how much we as an organisation contribute to the welfare of people in the world.  Making the connection between my work and the company mission, and ensuring we keep that in mind, and connect with products and customers, is a huge motivator to do our best every day.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Red tape, roadblocks, and doing the same thing repeatedly.  As one of my managers once said to me, quoting Albert Einstein, the definition of insanity is doing the same thing repeatedly and thinking that you will get a different result.  I prefer to think more like Dr. Stryker - if your tools dont work, make new ones that do.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Snr Mgr End User Technology Transformation, Snr Mgr Global Hosting Engineering (Wintel, VMware, Cloud), Mgr, Global Hosting Operations</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 4</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Singapore Noodles</p>
+<p><strong>Favorite Sport:</strong> Hurling</p>
+<p><strong>Favorite Book:</strong> Red Side Story by Jasper Fforde or Far From the Madding Crowd by Thomas Hardy</p>
+<p><strong>Favorite Art/Music:</strong> Too many to answer - Rock Music, Folk Music, Jackson Pollack Paintings, etc</p>
+<p><strong>Favorite DIY:</strong> Gardening, Flooring, Raised bed making etc</p>
+<p><strong>Impactful Books:</strong> The Phoenix Project - Gene Kim, Kevin Behr, and George Spafford
+From Strength to Strength - Arthur C Brooks</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Warm, Friendly, Informal</p>
+<p><strong>Preferred Contact:</strong> Email, Phone, Teams Message, In-Person, Flexible for however you want to connect</p></div></details><details><summary>Julian Jimenez Herrera</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Associate SOC Manager</p>
+<p><strong>Work Quote:</strong> "Leadership is not about being in charge. It is about taking care of those in your charge." — Simon Sinek</p>
+<p><strong>Leadership Philosophy:</strong> My leadership philosophy is simple: take care of your people, and they will take care of the business. I lead by example, empower others, foster trust, and build strong relationships with my team. This foundation gives me the confidence that, even when challenges arise, the team is always ready to step up and support each other.</p>
+<p><strong>Top 5 Strengths:</strong> Focus
+Achiever
+Futuristic
+Restorative
+Competition</p>
+<p><strong>Describe what motivates you most at work:</strong> : What drives me most is seeing people grow, both as professionals and as individuals. I’m genuinely passionate about cybersecurity and thrive in an environment where there is always something new to learn and improve. I find purpose in building high-performing teams, creating real cyber talent, and fostering a culture where people feel confident taking ownership and delivering results. I value the trust and strong relationships I build with my team, knowing they can face challenges and succeed even without my direct involvement.
+
+I’m always striving for progress, whether it is through continuous improvement, driving meaningful impact, or pushing to be better every day. I stay focused on what matters, challenge myself and my team to aim higher, and constantly look ahead to anticipate what is next so we can be prepared and stay ahead of the curve. Most importantly, I never forget that what we do in cyber goes beyond technology. We help protect lives, and that purpose connects me to this work in a deeper way and keeps me inspired every day.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Lack of Ownership or Accountability
+Short-Term Thinking or Lack of Vision
+Poor Team Collaboration (I need others team to accomplish my team goals)
+Poor Conflict Management or Passive-Aggressive Behavior</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : - Manager of Technical Security Teams (e.g. Threat Hunting, Red Team, Threat Intelligence, SOC/IR) Something related with AI could be amazing!
+
+- Global Security Manager (manage with different cultures and types of people)
+
+- Director/Senior Director of Cybersecurity
+
+I value the rotational development model, like the one CCI promotes, where leaders gain experience across different areas of cybersecurity. While my background is in SOC and IR, I believe stepping into domains like threat intelligence, offensive security, GRC, AI or strategy builds stronger, more well-rounded leadership.
+
+One of my key strengths is thinking ahead. I’m passionate about exploring what’s next—whether it’s AI, automation, or emerging technologies—and I’m motivated by roles that let me contribute to future-focused strategy and innovation.</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Olla de Carne</p>
+<p><strong>Favorite Sport:</strong> Soccer</p>
+<p><strong>Favorite Book:</strong> "The Secret" by Rhonda Byrne</p>
+<p><strong>Favorite Art/Music:</strong> I'm not very creative, but I hope to be able to play guitar someday.</p>
+<p><strong>Favorite DIY:</strong> AI &amp; Prompt Engineering Projects for solve daily tasks (finances, home, tasks etc), CyberSecurity Certifications, Currently trying to upgrade my BMW...</p>
+<p><strong>Impactful Books:</strong> "The Secret" by Rhonda Byrne
+"Atomic Habits" by James Clear</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Informal, warm and friendly. To the point if that matters.</p>
+<p><strong>Preferred Contact:</strong> Teams Message, In-Person, Phone</p></div></details><details><summary>Jill Duffy</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> VP, Assurance &amp; Risk Advisory</p>
+<p><strong>Work Quote:</strong> Get S*** Done!</p>
+<p><strong>Leadership Philosophy:</strong> Teamwork, trust, transparency</p>
+<p><strong>Top 5 Strengths:</strong> Arranger, Achiever, Strategic, Futuristic, Self-assurance</p>
+<p><strong>Describe what motivates you most at work:</strong> : Having a positive impact on people and processes, achieving success with others, continuous improvement, finding efficiency, solving problems.</p>
+<p><strong>Patience:</strong> 2</p>
+<p><strong>Analytical:</strong> 3</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Gaslighting, people who lack self-awareness, negativity</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Chief Audit Executive, VP Shared Services</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 1</p>
+<p><strong>Favorite Food:</strong> Sushi</p>
+<p><strong>Favorite Sport:</strong> Football</p>
+<p><strong>Favorite Book:</strong> Everything by Jane Austen</p>
+<p><strong>Favorite Art/Music:</strong> Concerts</p>
+<p><strong>Favorite DIY:</strong> Interior design</p>
+<p><strong>Impactful Books:</strong> Oh the places you'll go - Dr. Seuss</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> To the point</p>
+<p><strong>Preferred Contact:</strong> Teams Message, In-Person, Phone, Email</p></div></details><details><summary>Michelle O'Shaughnessy</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Director Cybersecurity</p>
+<p><strong>Work Quote:</strong> Setting an example is not the main means of influencing others, it is the only means.</p>
+<p><strong>Leadership Philosophy:</strong> Prioritize the personal and professional well-being of your team, and success will naturally follow. When people feel valued, supported, and engaged, they perform at their best. Lead with integrity by being true to your word. If you make a commitment, honor it—consistency and reliability build trust and drive results.</p>
+<p><strong>Top 5 Strengths:</strong> Achiever, Relator, Learner, Focus, Responsibility</p>
+<p><strong>Describe what motivates you most at work:</strong> : Our mission and culture</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Negativity and people who do not contribute or commit.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Sr. Manager, Cybersecurity
+Sr. Manager, Regional DSS Services (Europe and EEMEA)</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 1</p>
+<p><strong>Favorite Food:</strong> Pizza</p>
+<p><strong>Favorite Sport:</strong> Hurling</p>
+<p><strong>Favorite Book:</strong> The One Minute Manager</p>
+<p><strong>Favorite Art/Music:</strong> Running</p>
+<p><strong>Favorite DIY:</strong> Anything in the garden</p>
+<p><strong>Impactful Books:</strong> It's a long way from Pennny Apples - Bill Cullen</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Friendly and to the point.</p>
+<p><strong>Preferred Contact:</strong> Phone, Email, In-Person</p></div></details><details><summary>Victor Anaya</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Director Threat Intelligence Center</p>
+<p><strong>Work Quote:</strong> "Knowledge is power" - Francis Bacon</p>
+<p><strong>Leadership Philosophy:</strong> I’m passionate about developing new talent and recognizing potential in everyone. I believe in creating opportunities for people to grow and demonstrate their full capabilities by encouraging them to take controlled risks and learn through hands-on experience. My approach is rooted in trust, support, and empowering others to succeed.</p>
+<p><strong>Top 5 Strengths:</strong> Developer, Focus, Responsibility, Harmony, and Belief</p>
+<p><strong>Describe what motivates you most at work:</strong> : My people...developing them and seeing them grow.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Disappointing my leaders.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : IR Manager, Security Operations, Threat Intelligence Center</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Cheese burger</p>
+<p><strong>Favorite Sport:</strong> Baseball</p>
+<p><strong>Favorite Book:</strong> One minute manager</p>
+<p><strong>Favorite Art/Music:</strong> salsa music</p>
+<p><strong>Favorite DIY:</strong> Home improvement projects</p>
+<p><strong>Impactful Books:</strong> One Minute Manager - Ken Blanchard
+Ghost in the wires - Kevin Mitnick</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> informal</p>
+<p><strong>Preferred Contact:</strong> Email, Teams Message, signal, Phone, In-Person</p></div></details><details><summary>Frank Moloney</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> IT Director - Manufacturing Support</p>
+<p><strong>Work Quote:</strong> Train people well enough so they can leave, treat them well enough so they don’t want to</p>
+<p><strong>Leadership Philosophy:</strong> My leadership style is collaborative at its core. I believe the best results come from strong teamwork, open dialogue, and shared ownership. At times, I can be a bit hands-on, but that stems from a genuine desire to support my team and ensure we’re all aligned. I value clear, honest communication — nothing should come as a surprise — and I hold myself and my team to a high standard of accountability.
+
+When it comes to my work, I’m highly analytical. I like to understand the full picture and the impact of decisions before taking action. While I sometimes have to check my tendency to overanalyze, I believe thoughtful, data-informed decisions drive better long-term outcomes than reactive ones.</p>
+<p><strong>Top 5 Strengths:</strong> Relator, Individualization, Learner, Restorative, Analytical</p>
+<p><strong>Describe what motivates you most at work:</strong> : What motivates me most is seeing my team grow and knowing the work we do adds real value to Stryker. I find purpose in mentoring, problem-solving, and helping others reach their potential.</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Lack of ownership/accountability
+Siloed mentality
+Statistics (There are 3 types of lies .... lies, damned lies and statistics)</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Director Global Support Services - Wright Medical
+Director Global End User Services - Tornier
+Sr Mgr End User Computing - EMEA - Tornier</p>
+<p><strong>Belief:</strong> 3</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Thai</p>
+<p><strong>Favorite Sport:</strong> Rugby</p>
+<p><strong>Favorite Book:</strong> Hitchhikers Guide to the Galaxy</p>
+<p><strong>Favorite Art/Music:</strong> Concerts (Springsteen 4 times!)</p>
+<p><strong>Favorite DIY:</strong> Gardening</p>
+<p><strong>Impactful Books:</strong> OPEN - Andre Agassi
+Sandworm - A New Era of Cyberwar - Andy Greenburg</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Informal, friendly - I'm pretty easy going!</p>
+<p><strong>Preferred Contact:</strong> Email, Phone, In-Person, Teams Message</p></div></details><details><summary>Kevin Crotty</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Manager Cybersecurity</p>
+<p><strong>Work Quote:</strong> Move fast, but never in haste.</p>
+<p><strong>Leadership Philosophy:</strong> I take a lot from Bruce Lee’s idea of “Be like water.” For me, that means staying flexible when things change but clear on where we’re going. I try to lead with a steady hand, whether it's setting the vision, rolling up my sleeves to get things done, or staying calm when the tide changes.</p>
+<p><strong>Top 5 Strengths:</strong> 1. Achiever
+2. Futuristic
+3. Learner
+4. Responsibility
+5. Strategic</p>
+<p><strong>Describe what motivates you most at work:</strong> : Making real progress on problems that matter, especially the tough ones at the intersection of people, tech, and risk. I get energy from building trust, solving things properly, and helping others grow along the way.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: I get demotivated by short-term thinking, lack of ownership, and environments where trust is missing. I believe in clear goals, real accountability, and backing each other to get the job done right.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : 1. Cybersecurity Architect Manager
+2. Senior Lead Security Analyst (Threat Hunting)
+3. Senior IT Specialist</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 1</p>
+<p><strong>Favorite Food:</strong> Traditional Irish Shepherd's Pie</p>
+<p><strong>Favorite Sport:</strong> Hurling</p>
+<p><strong>Favorite Book:</strong> The Hobbit by J.R.R. Tolkien</p>
+<p><strong>Favorite Art/Music:</strong> Pencil or Charcoal Sketching / Singing /Country /Soul</p>
+<p><strong>Favorite DIY:</strong> Outdoor Construction and Indoor Renovation</p>
+<p><strong>Impactful Books:</strong> The Big Fellow: Michael Collins and the Irish Revolution
+Man's Search for Meaning by Viktor Frankl</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> The best way to approach me is just as you are—be your authentic self, be honest, and with have a clear sense of purpose. I don’t expect perfection, just real intent. I’m always open to challenge and meaningful debate; humour is welcome, ego isn’t.</p>
+<p><strong>Preferred Contact:</strong> In-Person, Teams Message, Phone, Carrier Pidgeon</p></div></details><details><summary>Swati Dharia</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> IT Sr Solutions Manager</p>
+<p><strong>Work Quote:</strong> You can do it!!</p>
+<p><strong>Leadership Philosophy:</strong> Servant Leadership</p>
+<p><strong>Top 5 Strengths:</strong> Woo, Relator, Communication, Learner, Strategic</p>
+<p><strong>Describe what motivates you most at work:</strong> : Trust and Clear Direction</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Lack of empowerment and respect</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : IT Sr Solutions Manager
+IT Director
+IT Sr Manager</p>
+<p><strong>Belief:</strong> 3</p>
+<p><strong>Awareness:</strong> 3</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Pizza</p>
+<p><strong>Favorite Sport:</strong> Basketball</p>
+<p><strong>Favorite Book:</strong> Leading Change</p>
+<p><strong>Favorite Art/Music:</strong> Bollywood music</p>
+<p><strong>Favorite DIY:</strong> Science Olympiad projects</p>
+<p><strong>Impactful Books:</strong> Leading Change- Kotter
+Hit Refresh- Satya Nadella</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Informal, flexible</p>
+<p><strong>Preferred Contact:</strong> Teams Message, In-Person, Phone, Email</p></div></details><details><summary>Anuj Handa</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Chief Enterprise Architect</p>
+<p><strong>Work Quote:</strong> "Some men see things as they are, and say why. I dream of things that never were, and say why not."</p>
+<p><strong>Leadership Philosophy:</strong> I prioritize and combine technology, business acumen, and transformative strategies to deliver measurable value to the organization.</p>
+<p><strong>Top 5 Strengths:</strong> Responsibility, Arranger, Achiever, Learner, Belief</p>
+<p><strong>Describe what motivates you most at work:</strong> : •	Promote progressive and growth culture aligned to Stryker’s values.
+•	Drive strategic resilience through better Risk Intelligence.
+•	Partner with stakeholders to influence business and technology decisions with architectural thinking.
+•	Promote transparency and informed decisions thru cost, technology and value metrics and KPIs.</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Pessimism and negativity 
+all talk and no action</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : 2009-Till Date (Hands-on multiple IT roles and functions) - Laid the foundation for Tech Centers IT function by hiring 150 employees, SDM for 350 Applications globally, Site lead for ISO 56K Audit, Supplier Performance and engagement, APAC PMO capability Setup, Chief Enterprise Architect for Security, Infra, MW, IT4IT and M&amp;As.
+
+2005-2009 (Technical PM) Build and led COE to sever top 10 global pharma companies like Pfizer, J&amp;J, Stiefel, Abbott, Capsugel, Schering-Plough in the Content management domain.  Key achievements included successfully transition of Content Management landscape in Pfizer globally for ~55,000+ users
+
+2000-2004 (Technical lead) Technical lead in implementing 11M USD Spectrum Management System which was part of 27M USD – World Bank funded, National Radio Spectrum Monitoring and Management System for Government of India in partnership with French conglomerate Thales.</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Grilled Chicken with hot spices</p>
+<p><strong>Favorite Sport:</strong> Hockey</p>
+<p><strong>Favorite Book:</strong> Bhagavad Gita on Effective Leadership</p>
+<p><strong>Favorite Art/Music:</strong> John Denver kind of songs, Passionate Photography</p>
+<p><strong>Favorite DIY:</strong> Kitchen Garden</p>
+<p><strong>Impactful Books:</strong> Recent Reads: 
+Power and Prediction: by Ajay Agrawal, Joshua Gans, Avi Goldfarb
+The Ecosystem Economy: by Venkat Atluri and Miklós Dietz</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Warm and friendly, informal</p>
+<p><strong>Preferred Contact:</strong> In-Person, Teams Message</p></div></details><details><summary>Oscar Espinoza</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Global SOC Leader</p>
+<p><strong>Work Quote:</strong> “Choose a job you love, and you will never have to work a day in your life.”
+— Confucius</p>
+<p><strong>Leadership Philosophy:</strong> For me, leadership is about listening, supporting, and growing together. I aim to create a space where people feel valued, trusted, and motivated to do their best work. I don’t believe in micromanaging—I believe in guiding, empowering, and being there when it matters most.</p>
+<p><strong>Top 5 Strengths:</strong> Learner
+Intellection
+Connectedness
+Maximizer
+Input</p>
+<p><strong>Describe what motivates you most at work:</strong> : What motivates me most is knowing that the work we do in Security Operations truly matters—we’re protecting people, data, assets, and businesses around the clock. I’m driven by the challenge of staying ahead in a constantly evolving threat landscape, and by watching my team grow into confident, capable defenders. Seeing them collaborate across time zones and come through under pressure—that’s what fuels me</p>
+<p><strong>Patience:</strong> 2</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: What demotivates me is when there's a lack of clear communication or accountability across teams and regions. In a global SecOps environment, alignment is critical—and when that breaks down, it impacts trust, efficiency, and morale. I also find it discouraging when individual or team efforts go unnoticed, especially in high-pressure, behind-the-scenes roles like ours where consistent vigilance often goes uncelebrated</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Global Security Operations
+Global Engineering Service Desk
+Global Manufacturing Service Desk</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 5</p>
+<p><strong>Favorite Food:</strong> Thai Food</p>
+<p><strong>Favorite Sport:</strong> Soccer</p>
+<p><strong>Favorite Book:</strong> Unlimited Power</p>
+<p><strong>Favorite Art/Music:</strong> Romantic</p>
+<p><strong>Impactful Books:</strong> Unlimited Power - Anthony Robbins
+Monk who sold his Ferrari - Sharma</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> to the point with data and facts</p>
+<p><strong>Preferred Contact:</strong> Phone, In-Person</p></div></details><details><summary>Caroline Vermeylen</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Director, IT Business Partner - DRE</p>
+<p><strong>Work Quote:</strong> It always seems impossible until it's done - Nelson Mandela</p>
+<p><strong>Leadership Philosophy:</strong> I try to be authentic, transparent, and humble as a leader. I want my team to understand and champion our strategy, and that requires trust and openness. I also recognize that I don't know everything, and make sure my team knows I rely on their expertise and experience as key contributors to our shared successes.</p>
+<p><strong>Top 5 Strengths:</strong> Input, Strategic, Individualization, Context, Activator</p>
+<p><strong>Describe what motivates you most at work:</strong> : I love a challenge... if someone says it can't be done, I want to try it!</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Negativity, too much bureaucracy and red tape (process for the sake of process), complacency</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : IT BP DRE
+IT BP T&amp;E/R&amp;D
+IT BP EEMEA</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Meat &amp; Potatoes</p>
+<p><strong>Favorite Sport:</strong> Baseball</p>
+<p><strong>Favorite Book:</strong> The Poisonwood Bible</p>
+<p><strong>Favorite Art/Music:</strong> Going to concerts</p>
+<p><strong>Favorite DIY:</strong> None</p>
+<p><strong>Impactful Books:</strong> The Poisonwood Bible - Barbara Kingsolver
+A Prayer for Owen Meany - John Irving</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Informal, friendly</p>
+<p><strong>Preferred Contact:</strong> Email, In-Person, Teams Message, Phone</p></div></details><details><summary>Stacey Petersen</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> IT Business Partner, Neurovascular</p>
+<p><strong>Work Quote:</strong> "You've got to think about the big things while you're doing the small things so that all the small things go in the right direction." — Alvin Toffler</p>
+<p><strong>Leadership Philosophy:</strong> Lead by example.</p>
+<p><strong>Top 5 Strengths:</strong> Responsibility, Achiever, Learner, Context &amp; Relator</p>
+<p><strong>Describe what motivates you most at work:</strong> : Making a positive impact on business user experiences.</p>
+<p><strong>Patience:</strong> 2</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 3</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: When a problem is solved, only to arise again...and again...and again.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Sales Program Manager (Commercial Ops), Sr. Manager Revenue Mgmt (Commercial Ops), Business Architect (IT)</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 3</p>
+<p><strong>Empathy:</strong> 2</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Mexican or Thai</p>
+<p><strong>Favorite Sport:</strong> Football</p>
+<p><strong>Favorite Book:</strong> No idea....</p>
+<p><strong>Favorite Art/Music:</strong> Not artistic...</p>
+<p><strong>Favorite DIY:</strong> Not handy, but like to garden!</p>
+<p><strong>Impactful Books:</strong> Notorious RBG: The Life and Times of Ruth Bader Ginsburg, by Irin Carmon and Shana Knizhnik 
+The World As it Is, by Ben Rhodes</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Warm and friendly, and to the point.  :)</p>
+<p><strong>Preferred Contact:</strong> Email, Teams Message</p></div></details><details><summary>Steven Scott</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Sr Principal Architect - IT AI and Automation Governance</p>
+<p><strong>Work Quote:</strong> Success consists of going from failure to failure without loss of enthusiasm.</p>
+<p><strong>Leadership Philosophy:</strong> Calculated risks often bring rewards, opportunity for growth comes with any set back, and effective communication and collaboration is key to success in large organizations.</p>
+<p><strong>Top 5 Strengths:</strong> COMMUNICATION | RESTORATIVE | ANALYTICAL | DELIBERATIVE | STRATEGIC</p>
+<p><strong>Describe what motivates you most at work:</strong> : Ability to influence and promote others toward as work toward a common, organizational goal.</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Decisions, Controls or Process that has no published reason, value or are not fit for purpose.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : HCA Healthcare; Sr Principal Enterprise Architect, Stryker DRE AI Sr Principal Cloud Architect, Stryker Global IT Sr Principal AI and Automation Architect</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 4</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Seafood</p>
+<p><strong>Favorite Sport:</strong> Sport Fishing</p>
+<p><strong>Favorite Book:</strong> Our Southern Highlanders</p>
+<p><strong>Favorite Art/Music:</strong> Music performance</p>
+<p><strong>Favorite DIY:</strong> Landscaping</p>
+<p><strong>Impactful Books:</strong> Measure What Matters -  John Doerr, Larry Page 
+Blood Meridian - Cormac McCarthy</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> friendly, to the point, formal, informal</p>
+<p><strong>Preferred Contact:</strong> Email, In-Person, Teams Message</p></div></details><details><summary>John Bledsoe</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Manager, Build Lead for DLP</p>
+<p><strong>Work Quote:</strong> "It is impossible for a man to learn what he thinks he already knows."
+"A gem can not be polished without friction"</p>
+<p><strong>Leadership Philosophy:</strong> I lead by getting to know people as individuals, in hopes to help them accomplish in their individual way. I believe that effective leaders share responsibility, working side by side with a team so that decisions and responsibilities are a joint effort. At the end of the day, I keep things outcome-focused by setting clear goals and making sure teams are on the same page about what success looks like.</p>
+<p><strong>Top 5 Strengths:</strong> 1.Focus
+2.Strategic
+3.Individualization
+4.Analytical
+5.Significance</p>
+<p><strong>Describe what motivates you most at work:</strong> : -Clear objectives with leaders trust &amp; guidance as I execute
+-being surrounded by an uplifting &amp; involved culture
+-being on a team where different strengths are celebrated &amp; people's unique background/talents are appreciated</p>
+<p><strong>Patience:</strong> 5</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 3</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: .</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : SDL in the Marketing Sales Collab tower
+Exec Deskside support</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 4</p>
+<p><strong>Favorite Food:</strong> Italian</p>
+<p><strong>Favorite Sport:</strong> Cycling</p>
+<p><strong>Favorite Book:</strong> Podcast? Darknet Diaries</p>
+<p><strong>Favorite Art/Music:</strong> Blues music</p>
+<p><strong>Favorite DIY:</strong> I've done a number of them.. Probably kitchen remodels!</p>
+<p><strong>Impactful Books:</strong> The First 90 Days - Michael Watkins
+Meditations - Marcus Aurelius</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Warm, informal, direct</p>
+<p><strong>Preferred Contact:</strong> In-Person, Teams Message</p></div></details><details><summary>Alberto Garcia</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Sr. Principal Security Engineer</p>
+<p><strong>Work Quote:</strong> Do the little things right.</p>
+<p><strong>Leadership Philosophy:</strong> Leading by example.</p>
+<p><strong>Top 5 Strengths:</strong> Achiever, Learner, Analytical, Focus, and Deliberative.</p>
+<p><strong>Describe what motivates you most at work:</strong> : Our mission is to protect Stryker's data and assets—serving our patients.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: When people lack integrity, it hinders them from realizing their full potential.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : IT Specialist, Security Analyst, and Red Team Manager.</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Rice with Carmela sausages, large red beans and tostones.</p>
+<p><strong>Favorite Sport:</strong> Rowing</p>
+<p><strong>Favorite Book:</strong> The Hacker Playbook</p>
+<p><strong>Impactful Books:</strong> Bible</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> To the point, informal or formal.</p>
+<p><strong>Preferred Contact:</strong> Email, Phone, In-Person, Teams Message, Signal</p></div></details><details><summary>Jeremy Prater</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> IT PMO Portfolio Director</p>
+<p><strong>Work Quote:</strong> "The question isn't who is going to let me; it's who is going to stop me."</p>
+<p><strong>Leadership Philosophy:</strong> To motivate and inspire others to achieve what they once couldn't.</p>
+<p><strong>Top 5 Strengths:</strong> Futuristic
+Analytical
+Restorative
+Responsibility
+Relator</p>
+<p><strong>Describe what motivates you most at work:</strong> : Developing leaders.</p>
+<p><strong>Patience:</strong> 1</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 3</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Not understanding the purpose or thought process behind what I am working on.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : PM
+PMO manager
+Portfolio Director</p>
+<p><strong>Belief:</strong> 3</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 1</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Ribeye</p>
+<p><strong>Favorite Sport:</strong> Football</p>
+<p><strong>Favorite Book:</strong> 1984</p>
+<p><strong>Favorite Art/Music:</strong> Concerts</p>
+<p><strong>Favorite DIY:</strong> working on trucks</p>
+<p><strong>Impactful Books:</strong> How to win friends and influence people (Carnegie)
+Ouliers (Gladwell)</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> informal, 1:1</p>
+<p><strong>Preferred Contact:</strong> Email</p></div></details><details><summary>Alex Dorsey</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Associate Manager, Advanced Threat Hunting</p>
+<p><strong>Work Quote:</strong> Don't be busy, be productive.</p>
+<p><strong>Leadership Philosophy:</strong> I lead by fostering collaboration and empowering my team to contribute to strategic decision-making. My approach focuses on continuous improvement of team processes, ensuring alignment with broader goals while supporting individual growth and accountability.</p>
+<p><strong>Top 5 Strengths:</strong> 1. Arranger
+2. Analytical
+3. Relator
+4. Achiever
+5. Responsibility</p>
+<p><strong>Describe what motivates you most at work:</strong> : Support and commitment to a mission that matters to me. Stryker develops products that improves people's lives and supporting that mission is a driving factor in my day-to-day motivation.</p>
+<p><strong>Patience:</strong> 4</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 3</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Being micro-managed or feeling that I need to micro-manage someone or a team.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Lead Reporter for USCENTCOM Theater Support
+Lead Analyst for CTI
+Associate Manger for ATH</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 2</p>
+<p><strong>Favorite Food:</strong> Pizza</p>
+<p><strong>Favorite Sport:</strong> Football</p>
+<p><strong>Favorite Book:</strong> The Hobbit</p>
+<p><strong>Favorite Art/Music:</strong> Video Game/Movie soundtracks</p>
+<p><strong>Favorite DIY:</strong> None</p>
+<p><strong>Impactful Books:</strong> Lord of the Rings - JRR Tolkien
+Whale Done - Kenneth H. Blanchard</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> To the point and informal.</p>
+<p><strong>Preferred Contact:</strong> Teams Message, Signal, Phone</p></div></details><details><summary>Rich Ragasa</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Senior Lead Engineer, IT Infrastructure - Unix</p>
+<p><strong>Work Quote:</strong> Great things in business are never done by one person. They're done by a team of people.
+
+Steve Jobs</p>
+<p><strong>Leadership Philosophy:</strong> Do the right things, build trust, and don't settle.</p>
+<p><strong>Top 5 Strengths:</strong> Achiever, Learner Ideation, Context, Intellection.</p>
+<p><strong>Describe what motivates you most at work:</strong> : Every accomplishment is a stepping stone to building a greater self and a greater company.</p>
+<p><strong>Patience:</strong> 5</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 5</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: People who are dishonest, lack ethics, &amp; always confrontational</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Sr. Infrastructure Engineer lead
+Sr Systems Administrator
+Sr Systems Analyst</p>
+<p><strong>Belief:</strong> 5</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Burritos</p>
+<p><strong>Favorite Sport:</strong> Basketball</p>
+<p><strong>Favorite Book:</strong> East of Eden</p>
+<p><strong>Favorite Art/Music:</strong> Metal/Rock Music</p>
+<p><strong>Favorite DIY:</strong> Gardening</p>
+<p><strong>Impactful Books:</strong> A People's History of the United States, Howard Zinn
+The Art of War, Sun Tzu</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Warm and friendly</p>
+<p><strong>Preferred Contact:</strong> Teams Message</p></div></details><details><summary>Suganya Sivakumar</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Sr. Manager, Cybersecurity Engineering</p>
+<p><strong>Work Quote:</strong> In matters of style, swim with the current. In matters of principle stand like a rock!</p>
+<p><strong>Leadership Philosophy:</strong> Default to simplicity
+Leave everything better than you found it 
+You won't have work life balance, unless you do good work</p>
+<p><strong>Top 5 Strengths:</strong> 1) Arranger
+2) Connectedness
+3) Relator
+4) Learner
+5) Analytical</p>
+<p><strong>Describe what motivates you most at work:</strong> : Clarity, context, psychological safety, opportunity to do good and meaningful work, smart and engaged colleagues</p>
+<p><strong>Patience:</strong> 5</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 4</p>
+<p><strong>Handles Pressure:</strong> 3</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: lack of accountability, lack of support, being excluded</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Manager - Cloud Security Manager
+Manager - Release Manager
+Manager - Service Level Manager</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 3</p>
+<p><strong>Empathy:</strong> 4</p>
+<p><strong>Self-Centeredness:</strong> 4</p>
+<p><strong>Favorite Food:</strong> Dosa (South Indian pancakes )</p>
+<p><strong>Favorite Sport:</strong> Hmmm.....</p>
+<p><strong>Favorite Book:</strong> The essay - "All I really need to know I learned in kindergarten" from the book with the same title - Robert Fulghum</p>
+<p><strong>Favorite Art/Music:</strong> Carnatic - South Indian Classical Music</p>
+<p><strong>Favorite DIY:</strong> Salvage / Collect ethnic brass items</p>
+<p><strong>Impactful Books:</strong> Almanack of Naval Ravikant - Eric Jorgenson
+Being Mortal - Atul Gawande</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> informal</p>
+<p><strong>Preferred Contact:</strong> Phone, In-Person, Teams Message</p></div></details><details><summary>Toni Slufik</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Sr. Manager, CCI Compliance</p>
+<p><strong>Work Quote:</strong> Change is the result of all true learning</p>
+<p><strong>Leadership Philosophy:</strong> I approach leadership with a forward-thinking and solutions-oriented mindset. I thrive on  generating innovative ideas and mapping out clear, strategic paths toward long-term goals. I’m energized by learning and gathering knowledge, which I use to make informed decisions and to inspire others. I value curiosity, creativity, and continuous growth both for myself and my team.</p>
+<p><strong>Top 5 Strengths:</strong> Strategic, Input, Achiever, Ideation, Futuristic</p>
+<p><strong>Describe what motivates you most at work:</strong> : New concepts, insight, ideas formulated into strategy &amp; implementation</p>
+<p><strong>Patience:</strong> 2</p>
+<p><strong>Analytical:</strong> 4</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Lack of clear direction - I need to know where we’re headed and why it matters.
+Repetitive tasks with no room for creativity or growth
+Information silos</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : QMS/Auditing, CSV, other compliance roles</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 4</p>
+<p><strong>Empathy:</strong> 3</p>
+<p><strong>Self-Centeredness:</strong> 4</p>
+<p><strong>Favorite Food:</strong> anything italian</p>
+<p><strong>Favorite Sport:</strong> soccer</p>
+<p><strong>Favorite Book:</strong> Lone Survivor</p>
+<p><strong>Favorite Art/Music:</strong> music</p>
+<p><strong>Favorite DIY:</strong> refinishing furniture</p>
+<p><strong>Impactful Books:</strong> Lone Survivor, Marcus Luttrell
+The Boy in the Striped Pajamas, John Boyne</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> informal</p>
+<p><strong>Preferred Contact:</strong> Teams Message, In-Person, Phone</p></div></details><details><summary>Pablo Quesada</summary><div style="margin-left: 20px;">
+<p><strong>Position:</strong> Manager, Cybersecurity Defense</p>
+<p><strong>Work Quote:</strong> No hero saves the day alone</p>
+<p><strong>Leadership Philosophy:</strong> I don’t believe in just giving people the fish, but I believe in teaching them how to fish. That means coaching them how to make educated decisions, helping them learn how their own mistakes and empowering them to grow. My leadership style is rooted in accountability so I can delegate appropriately while building a strong relationships based on trust and ownership.</p>
+<p><strong>Top 5 Strengths:</strong> Responsibility
+Relator
+Achiever
+Analytical
+Communication</p>
+<p><strong>Describe what motivates you most at work:</strong> : My main motivation at work is seeing an improvement day by day. I enjoy identifying problems, working with the team to discuss possible solutions and then actually implementing those solutions. That process is not only drives progress, but also creates a sense of accountability where people are in encouraged to evaluate different options and perspectives.</p>
+<p><strong>Patience:</strong> 3</p>
+<p><strong>Analytical:</strong> 5</p>
+<p><strong>Problem Solving:</strong> 5</p>
+<p><strong>Handles Pressure:</strong> 4</p>
+<p><strong>What Demotivates Me:</strong> List any major demotivators:: Teams not taking accountability but looking to blame others. 
+Individuals not working as a team but making decisions on their own affectation without seeing the whole picture of the team.</p>
+<p><strong>Positions Held:</strong> (List 3 high-level roles that are relevant to your career path) : Security Architecture
+Incident response
+SOC Manager</p>
+<p><strong>Belief:</strong> 4</p>
+<p><strong>Awareness:</strong> 5</p>
+<p><strong>Empathy:</strong> 5</p>
+<p><strong>Self-Centeredness:</strong> 3</p>
+<p><strong>Favorite Food:</strong> Pizza lover</p>
+<p><strong>Favorite Sport:</strong> Soccer</p>
+<p><strong>Favorite Book:</strong> Everlost</p>
+<p><strong>Favorite Art/Music:</strong> Rock</p>
+<p><strong>Favorite DIY:</strong> Hydroponics</p>
+<p><strong>Impactful Books:</strong> 4 disciplines of execution</p>
+<p><strong>Best way to approach me for a discussion (e.g., warm and friendly, to the point, formal, informal):</strong> Direct to the point. Informal if we have a relationship.</p>
+<p><strong>Preferred Contact:</strong> Email, In-Person, Teams Message</p></div></details></div></body></html>
